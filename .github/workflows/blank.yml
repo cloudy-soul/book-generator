@@ -69,8 +69,10 @@ jobs:
           fi
 
       - name: YAML Syntax Validation
-        if: success() && hash('config')
-        run: |
+      - name: Check if config directory exists
+        id: check-config
+        run: echo "exists=$([ -d config ] && echo true || echo false)" >> $GITHUB_OUTPUT
+        if: success() && contains(toJSON(steps.check.outputs.directories), 'config')        run: |
           python -c "
           import yaml
           import os
