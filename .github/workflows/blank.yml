@@ -2,9 +2,9 @@ name: CI/CD Pipeline
 
 on:
   push:
-    branches: [ "main", "develop" ]
+    branches: [ "main","features" ]
   pull_request:
-    branches: [ "main", "develop" ]
+    branches: [ "main", "features" ]
   schedule:
     # Weekly security scan on Sundays at 2 AM UTC
     - cron: '0 2 * * 0'
