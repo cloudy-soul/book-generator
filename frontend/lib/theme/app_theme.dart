@@ -17,7 +17,7 @@ class AppTheme {
       ),
       
       // Organic Shape System
-      cardTheme: CardThemeData(
+      cardTheme: CardTheme(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(24.0),
         ),
