@@ -10,7 +10,8 @@ import 'package:frontend/services/api_service.dart';
 import 'package:http/http.dart' as http;
 
 class InputFormPage extends StatefulWidget {
-  const InputFormPage({super.key});
+  final http.Client? httpClient;
+  const InputFormPage({super.key, this.httpClient});
   
   @override
   State<InputFormPage> createState() => _InputFormPageState();
@@ -296,7 +297,7 @@ class _InputFormPageState extends State<InputFormPage> {
     // 2. DEBUG LOG: Check your console to see if this changes when you change inputs!
     print('🚀 SENDING TO API: $cleanSelections');
 
-  final api = ApiService(client: http.Client());
+  final api = ApiService(client: widget.httpClient ?? http.Client());
   Map<String, dynamic>? result;
 
     try {

@@ -1,3 +1,6 @@
+import 'dart:convert';
+import 'package:http/testing.dart';
+import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:frontend/pages/input_form_page.dart';
@@ -80,8 +83,16 @@ void main() {
   });
 
   testWidgets('Submit button enables with valid form', (WidgetTester tester) async {
+    // Create a mock client that always returns 200 OK
+    final mockClient = MockClient((request) async {
+      return http.Response(jsonEncode({
+        'books': [], 'perfume': {}, 'drink': {}
+      }), 200);
+    });
+
     await tester.pumpWidget(MaterialApp(
-      home: const InputFormPage(),
+      // Inject the mock client
+      home: InputFormPage(httpClient: mockClient),
       routes: {
         '/results': (context) => const ResultsPage(),
       },
