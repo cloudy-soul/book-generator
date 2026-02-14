@@ -192,33 +192,34 @@ jobs:
         working-directory: ./config
         run: |
           python -c "
-import yaml
-import os
-import glob
-import sys
+          import yaml
+          import os
+          import glob
+          import sys
+          
+          exit_code = 0
+          yaml_files = glob.glob('*.yaml') + glob.glob('*.yml')
+          
+          if not yaml_files:
+              print('❌ No YAML files found')
+              sys.exit(1)
+          
+          print(f'Found {len(yaml_files)} YAML files')
+          for file_path in yaml_files:
+              print(f'\\nValidating {file_path}...')
+              try:
+                  with open(file_path, 'r', encoding='utf-8') as f:
+                      data = yaml.safe_load(f)
+                  print(f'  ✅ Valid')
+              except yaml.YAMLError as e:
+                  print(f'  ❌ YAML Error: {e}')
+                  exit_code = 1
+              except Exception as e:
+                  print(f'  ❌ Error: {e}')
+                  exit_code = 1
+          sys.exit(exit_code)
+          "
 
-exit_code = 0
-yaml_files = glob.glob('*.yaml') + glob.glob('*.yml')
-
-if not yaml_files:
-    print('❌ No YAML files found')
-    sys.exit(1)
-
-print(f'Found {len(yaml_files)} YAML files')
-for file_path in yaml_files:
-    print(f'\\nValidating {file_path}...')
-    try:
-        with open(file_path, 'r', encoding='utf-8') as f:
-            data = yaml.safe_load(f)
-        print(f'  ✅ Valid')
-    except yaml.YAMLError as e:
-        print(f'  ❌ YAML Error: {e}')
-        exit_code = 1
-    except Exception as e:
-        print(f'  ❌ Error: {e}')
-        exit_code = 1
-sys.exit(exit_code)
-"
 
   # --------------------------------------------------
   # 4. SECURITY SCAN - ALWAYS RUNS (OPTIONAL)
