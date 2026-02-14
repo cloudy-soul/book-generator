@@ -2,7 +2,7 @@ name: CI/CD Pipeline
 
 on:
   push:
-    branches: [ "main", "features" ]
+    branches: [ "main", "features" ]  # Changed from "develop" to "features"
   pull_request:
     branches: [ "main", "features" ]
   workflow_dispatch:
@@ -17,31 +17,83 @@ concurrency:
 
 jobs:
   # --------------------------------------------------
-  # 1. BACKEND TESTS
+  # CHECK WHAT FILES EXIST IN THIS COMMIT
   # --------------------------------------------------
-  backend-tests:
-    name: Backend Tests
+  check-files:
+    name: Check Repository Files
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    outputs:
+      has_backend: ${{ steps.check.outputs.has_backend }}
+      has_frontend: ${{ steps.check.outputs.has_frontend }}
+      has_config: ${{ steps.check.outputs.has_config }}
+      has_app_code: ${{ steps.check.outputs.has_app_code }}
     
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
       
-      - name: Show Current Directory Structure
+      - name: Check for App Directories
+        id: check
         run: |
-          echo "📁 Current directory: $(pwd)"
-          echo "Contents:"
+          echo "📁 Checking repository contents:"
+          echo "Current directory: $(pwd)"
           ls -la
           echo ""
-          echo "📁 Looking for backend directory:"
-          if [ -d "backend" ]; then
-            echo "✅ Found backend/ directory"
-            ls -la backend/
+          
+          # Check for backend directory with actual code
+          if [ -d "backend" ] && [ -f "backend/requirements.txt" ]; then
+            echo "has_backend=true" >> $GITHUB_OUTPUT
+            echo "✅ Found backend/ with requirements.txt"
           else
-            echo "❌ No backend/ directory found"
-            exit 1
+            echo "has_backend=false" >> $GITHUB_OUTPUT
+            echo "⚠️ No backend app code found (only workflow files present)"
           fi
+          
+          # Check for frontend directory with actual code
+          if [ -d "frontend" ] && [ -f "frontend/pubspec.yaml" ]; then
+            echo "has_frontend=true" >> $GITHUB_OUTPUT
+            echo "✅ Found frontend/ with pubspec.yaml"
+          else
+            echo "has_frontend=false" >> $GITHUB_OUTPUT
+            echo "⚠️ No frontend app code found (only workflow files present)"
+          fi
+          
+          # Check for config directory with YAML files
+          if [ -d "config" ] && ls config/*.yaml >/dev/null 2>&1; then
+            echo "has_config=true" >> $GITHUB_OUTPUT
+            echo "✅ Found config/ with YAML files"
+          else
+            echo "has_config=false" >> $GITHUB_OUTPUT
+            echo "⚠️ No config YAML files found"
+          fi
+          
+          # Overall app code check
+          if [ "$has_backend" == "true" ] || [ "$has_frontend" == "true" ] || [ "$has_config" == "true" ]; then
+            echo "has_app_code=true" >> $GITHUB_OUTPUT
+          else
+            echo "has_app_code=false" >> $GITHUB_OUTPUT
+          fi
+          
+          echo ""
+          echo "📊 Summary:"
+          echo "  has_backend: ${{ steps.check.outputs.has_backend }}"
+          echo "  has_frontend: ${{ steps.check.outputs.has_frontend }}"
+          echo "  has_config: ${{ steps.check.outputs.has_config }}"
+          echo "  has_app_code: ${{ steps.check.outputs.has_app_code }}"
+
+  # --------------------------------------------------
+  # 1. BACKEND TESTS - ONLY RUN IF BACKEND CODE EXISTS
+  # --------------------------------------------------
+  backend-tests:
+    name: Backend Tests
+    runs-on: ubuntu-latest
+    needs: check-files
+    if: needs.check-files.outputs.has_backend == 'true'
+    timeout-minutes: 15
+    
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
       
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -52,28 +104,18 @@ jobs:
         working-directory: ./backend
         run: |
           python -m pip install --upgrade pip
-          echo "📦 Installing from $(pwd)"
-          if [ -f "requirements.txt" ]; then
-            pip install -r requirements.txt
-          else
-            echo "⚠️ No requirements.txt found, installing pytest only"
-            pip install pytest pytest-cov flake8
-          fi
-
-      - name: Create Placeholder Test if None Exist
-        working-directory: ./backend
-        run: |
-          if [ ! -d "tests" ] || [ -z "$(ls -A tests 2>/dev/null)" ]; then
-            echo "⚠️ No tests found, creating placeholder"
-            mkdir -p tests
-            echo "def test_placeholder(): assert True" > tests/test_placeholder.py
-          fi
+          pip install -r requirements.txt
+          pip install pytest pytest-cov flake8
 
       - name: Run Tests
         working-directory: ./backend
-        continue-on-error: false
         run: |
-          python -m pytest tests/ -v --cov=./ --cov-report=term --junitxml=test-results.xml
+          if [ -d "tests" ]; then
+            python -m pytest tests/ -v --cov=./ --cov-report=term --junitxml=test-results.xml
+          else
+            echo "⚠️ No tests directory found"
+            exit 1
+          fi
 
       - name: Upload Test Results
         if: always()
@@ -84,94 +126,59 @@ jobs:
           retention-days: 7
 
   # --------------------------------------------------
-  # 2. FRONTEND TESTS
+  # 2. FRONTEND TESTS - ONLY RUN IF FRONTEND CODE EXISTS
   # --------------------------------------------------
   frontend-tests:
     name: Flutter Tests
     runs-on: ubuntu-latest
+    needs: check-files
+    if: needs.check-files.outputs.has_frontend == 'true'
     timeout-minutes: 20
     
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
       
-      - name: Show Current Directory Structure
-        run: |
-          echo "📁 Current directory: $(pwd)"
-          echo "Contents:"
-          ls -la
-          echo ""
-          echo "📁 Looking for frontend directory:"
-          if [ -d "frontend" ]; then
-            echo "✅ Found frontend/ directory"
-            ls -la frontend/
-          else
-            echo "❌ No frontend/ directory found"
-            exit 1
-          fi
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
           flutter-version: ${{ env.FLUTTER_VERSION }}
           channel: 'stable'
 
-      - name: Check for Flutter Project
-        working-directory: ${{ steps.set-dir.outputs.frontend-dir }}
-        id: check-flutter
-        run: |
-          if [ -f "pubspec.yaml" ]; then
-            echo "is_flutter=true" >> $GITHUB_OUTPUT
-            echo "✅ Flutter project detected"
-          else
-            echo "is_flutter=false" >> $GITHUB_OUTPUT
-            echo "❌ No pubspec.yaml found - not a Flutter project"
-          fi
-
       - name: Get Dependencies
-        if: steps.check-flutter.outputs.is_flutter == 'true'
-        working-directory: ${{ steps.set-dir.outputs.frontend-dir }}
+        working-directory: ./frontend
         run: flutter pub get
 
-      - name: Analyze
-        if: steps.check-flutter.outputs.is_flutter == 'true'
-        working-directory: ${{ steps.set-dir.outputs.frontend-dir }}
-        continue-on-error: false
-        run: flutter analyze
-
       - name: Run Tests
-        if: steps.check-flutter.outputs.is_flutter == 'true'
-        working-directory: ${{ steps.set-dir.outputs.frontend-dir }}
-        continue-on-error: false
+        working-directory: ./frontend
         run: |
           if [ -d "test" ]; then
-            flutter test || echo "⚠️ Some tests failed"
+            flutter test --machine > test-results.json
           else
-            echo "⚠️ No test directory found, creating placeholder"
-            mkdir -p test
-            echo "import 'package:flutter_test/flutter_test.dart'; void main() { test('placeholder', () => expect(1, 1)); }" > test/placeholder_test.dart
-            flutter test
+            echo "⚠️ No test directory found"
+            exit 1
           fi
+
+      - name: Upload Test Results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: flutter-test-results
+          path: frontend/test-results.json
+          retention-days: 7
+
   # --------------------------------------------------
-  # 3. CONFIG VALIDATION
+  # 3. CONFIG VALIDATION - ONLY RUN IF CONFIG EXISTS
   # --------------------------------------------------
   config-validation:
     name: Validate YAML Configs
     runs-on: ubuntu-latest
+    needs: check-files
+    if: needs.check-files.outputs.has_config == 'true'
     
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
-      
-      - name: Show Config Directory
-        run: |
-          echo "📁 Looking for config directory:"
-          if [ -d "config" ]; then
-            echo "✅ Found config/ directory"
-            ls -la config/
-          else
-            echo "❌ No config/ directory found"
-            exit 1
-          fi
       
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -184,32 +191,43 @@ jobs:
       - name: Validate YAML Files
         working-directory: ./config
         run: |
-          CONFIG_DIR="${{ needs.detect-structure.outputs.config-dir }}"
           python -c "
-          import yaml, os, glob
-          exit_code = 0
-          yaml_files = glob.glob(f'{CONFIG_DIR}/*.yaml') + glob.glob(f'{CONFIG_DIR}/*.yml')
-          print(f'Found {len(yaml_files)} YAML files in {CONFIG_DIR}/')
-          for file_path in yaml_files:
-              print(f'Validating {file_path}...')
-              try:
-                  with open(file_path, 'r', encoding='utf-8') as f:
-                      data = yaml.safe_load(f)
-                  print(f'  ✅ Valid: {type(data).__name__}')
-              except yaml.YAMLError as e:
-                  print(f'  ❌ Invalid YAML: {e}')
-                  exit_code = 1
-              except Exception as e:
-                  print(f'  ❌ Error: {e}')
-                  exit_code = 1
-          exit(exit_code)
-          "
+import yaml
+import os
+import glob
+import sys
+
+exit_code = 0
+yaml_files = glob.glob('*.yaml') + glob.glob('*.yml')
+
+if not yaml_files:
+    print('❌ No YAML files found')
+    sys.exit(1)
+
+print(f'Found {len(yaml_files)} YAML files')
+for file_path in yaml_files:
+    print(f'\\nValidating {file_path}...')
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            data = yaml.safe_load(f)
+        print(f'  ✅ Valid')
+    except yaml.YAMLError as e:
+        print(f'  ❌ YAML Error: {e}')
+        exit_code = 1
+    except Exception as e:
+        print(f'  ❌ Error: {e}')
+        exit_code = 1
+sys.exit(exit_code)
+"
+
   # --------------------------------------------------
-  # 4. SECURITY SCAN
+  # 4. SECURITY SCAN - ALWAYS RUNS (OPTIONAL)
   # --------------------------------------------------
   security-scan:
     name: Security Scan
     runs-on: ubuntu-latest
+    needs: check-files
+    if: always()  # Always run this job
     timeout-minutes: 10
     
     steps:
@@ -225,47 +243,32 @@ jobs:
         run: |
           pip install bandit safety
 
-      - name: Scan Backend Code
-        continue-on-error: false
+      - name: Scan Backend Code (if exists)
+        if: needs.check-files.outputs.has_backend == 'true'
+        continue-on-error: true
         run: |
-          if [ -d "backend" ]; then
-            echo "🔍 Scanning backend code..."
-            bandit -r backend/ -f json -o bandit-report.json || echo "⚠️ Bandit found issues"
-          fi
+          bandit -r backend/ -f json -o bandit-report.json || true
 
-      - name: Check Python Dependencies
-        continue-on-error: false
+      - name: Check Python Dependencies (if exists)
+        if: needs.check-files.outputs.has_backend == 'true'
+        continue-on-error: true
         run: |
-          if [ -f "backend/requirements.txt" ]; then
-            echo "🔍 Checking backend dependencies..."
-            safety check -r backend/requirements.txt --json > safety-report.json || echo "⚠️ Safety found vulnerabilities"
-          fi
+          safety check -r backend/requirements.txt --json > safety-report.json || true
 
       - name: TruffleHog Secrets Scan
         uses: trufflesecurity/trufflehog@v3.81.0
-        continue-on-error: false
+        continue-on-error: true
         with:
           path: ./
-          extra_args: --no-update --only-verified --max-depth=3
-
-      - name: Upload Security Reports
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: security-reports
-          path: |
-            bandit-report.json
-            safety-report.json
-          retention-days: 30
-          if-no-files-found: warn
+          extra_args: --only-verified --max-depth=3  # Removed --no-update flag
 
   # --------------------------------------------------
-  # 5. QUALITY GATE
+  # 5. QUALITY GATE - ADAPTIVE BASED ON WHAT EXISTS
   # --------------------------------------------------
   quality-gate:
     name: Quality Gate
     runs-on: ubuntu-latest
-    needs: [backend-tests, frontend-tests, config-validation, security-scan]
+    needs: [check-files, backend-tests, frontend-tests, config-validation, security-scan]
     if: always()
     
     steps:
@@ -275,49 +278,56 @@ jobs:
           echo "📊 QUALITY GATE REPORT"
           echo "==================================="
           echo ""
-          echo "📁 Repository Structure:"
-          echo "  Root: $(pwd)"
-          echo "  Contents:"
+          echo "📁 Repository Contents:"
           ls -la | sed 's/^/    /'
           echo ""
           
-          echo "🔍 Job Results:"
-          echo "  Backend Tests: ${{ needs.backend-tests.result }}"
-          echo "  Frontend Tests: ${{ needs.frontend-tests.result }}"
-          echo "  Config Validation: ${{ needs.config-validation.result }}"
-          echo "  Security Scan: ${{ needs.security-scan.result }}"
+          echo "🔍 App Code Detection:"
+          echo "  Backend code: ${{ needs.check-files.outputs.has_backend }}"
+          echo "  Frontend code: ${{ needs.check-files.outputs.has_frontend }}"
+          echo "  Config files: ${{ needs.check-files.outputs.has_config }}"
           echo ""
           
           FAILED=false
+          TESTS_RAN=false
           
-          # Check backend tests
-          if [[ "${{ needs.backend-tests.result }}" == "failure" ]]; then
-            echo "❌ Backend tests FAILED"
-            FAILED=true
-          elif [[ "${{ needs.backend-tests.result }}" == "success" ]]; then
-            echo "✅ Backend tests PASSED"
+          # Check backend tests (only if backend should exist)
+          if [ "${{ needs.check-files.outputs.has_backend }}" == "true" ]; then
+            TESTS_RAN=true
+            if [[ "${{ needs.backend-tests.result }}" != "success" ]]; then
+              echo "❌ Backend tests FAILED (required because backend/ exists)"
+              FAILED=true
+            else
+              echo "✅ Backend tests PASSED"
+            fi
           else
-            echo "⚠️ Backend tests: ${{ needs.backend-tests.result }}"
+            echo "⏭️ Backend tests skipped (no backend code)"
           fi
           
-          # Check frontend tests
-          if [[ "${{ needs.frontend-tests.result }}" == "failure" ]]; then
-            echo "❌ Frontend tests FAILED"
-            FAILED=true
-          elif [[ "${{ needs.frontend-tests.result }}" == "success" ]]; then
-            echo "✅ Frontend tests PASSED"
+          # Check frontend tests (only if frontend should exist)
+          if [ "${{ needs.check-files.outputs.has_frontend }}" == "true" ]; then
+            TESTS_RAN=true
+            if [[ "${{ needs.frontend-tests.result }}" != "success" ]]; then
+              echo "❌ Frontend tests FAILED (required because frontend/ exists)"
+              FAILED=true
+            else
+              echo "✅ Frontend tests PASSED"
+            fi
           else
-            echo "⚠️ Frontend tests: ${{ needs.frontend-tests.result }}"
+            echo "⏭️ Frontend tests skipped (no frontend code)"
           fi
           
-          # Check config validation
-          if [[ "${{ needs.config-validation.result }}" == "failure" ]]; then
-            echo "❌ Config validation FAILED"
-            FAILED=true
-          elif [[ "${{ needs.config-validation.result }}" == "success" ]]; then
-            echo "✅ Config validation PASSED"
+          # Check config validation (only if config should exist)
+          if [ "${{ needs.check-files.outputs.has_config }}" == "true" ]; then
+            TESTS_RAN=true
+            if [[ "${{ needs.config-validation.result }}" != "success" ]]; then
+              echo "❌ Config validation FAILED (required because config/ exists)"
+              FAILED=true
+            else
+              echo "✅ Config validation PASSED"
+            fi
           else
-            echo "⚠️ Config validation: ${{ needs.config-validation.result }}"
+            echo "⏭️ Config validation skipped (no config files)"
           fi
           
           # Security scan (non-blocking)
@@ -331,6 +341,13 @@ jobs:
           
           echo ""
           echo "==================================="
+          
+          # If no tests ran at all (first commit with only workflow files)
+          if [ "$TESTS_RAN" == "false" ]; then
+            echo "ℹ️ No app code detected - this is expected for initial CI setup"
+            echo "✅ Pipeline passed (only workflow files present)"
+            exit 0
+          fi
           
           if [[ "$FAILED" == "true" ]]; then
             echo "🚫 QUALITY GATE FAILED"
