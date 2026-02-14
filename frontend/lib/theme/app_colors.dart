@@ -10,7 +10,8 @@ class AppColors {
   static const Color deepMoss = Color(0xFF2E4600);       // Important text
   
   // Deep Reds (Passion & Focus)
-  static const Color bibliophileRed = Color(0xFF9D2933); // Primary CTAs
+  //0xFF9D2933
+  static const Color bibliophileRed = Color(0xFFC71585); // Primary CTAs
   static const Color berryAccent = Color(0xFFC71585);    // Hover states
   
   // Gentle Blues (Clarity & Trust)
