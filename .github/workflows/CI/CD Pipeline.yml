@@ -16,6 +16,59 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+
+  # Add this as a new job at the beginning of your workflow
+  debug-structure:
+    name: Debug Repository Structure
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Show full repository structure
+        run: |
+          echo "==================================="
+          echo "📁 CURRENT DIRECTORY: $(pwd)"
+          echo "==================================="
+          echo ""
+          
+          echo "📂 ALL FILES AND DIRECTORIES:"
+          ls -la
+          echo ""
+          
+          echo "📂 CHECKING FOR BACKEND:"
+          if [ -d "backend" ]; then
+            echo "✅ backend/ EXISTS"
+            echo "Contents of backend/:"
+            ls -la backend/
+          else
+            echo "❌ backend/ DOES NOT EXIST"
+          fi
+          echo ""
+          
+          echo "📂 CHECKING FOR FRONTEND:"
+          if [ -d "frontend" ]; then
+            echo "✅ frontend/ EXISTS"
+            echo "Contents of frontend/:"
+            ls -la frontend/
+          else
+            echo "❌ frontend/ DOES NOT EXIST"
+          fi
+          echo ""
+          
+          echo "📂 CHECKING FOR CONFIG:"
+          if [ -d "config" ]; then
+            echo "✅ config/ EXISTS"
+            echo "Contents of config/:"
+            ls -la config/
+          else
+            echo "❌ config/ DOES NOT EXIST"
+          fi
+          echo ""
+          
+          echo "📂 CHECKING GIT BRANCH INFO:"
+          git branch
+          git log --oneline -3
   # --------------------------------------------------
   # CHECK WHAT FILES EXIST IN THIS COMMIT
   # --------------------------------------------------
