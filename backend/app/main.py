@@ -32,6 +32,12 @@ engine = RecommendationEngine(
     drinks_path='config/drinks.yaml'
 )
 
+
+# Add this endpoint
+@app.get("/")
+def read_root():
+    return {"message": "Welcome to the Backend API"}
+
 @app.get("/health")
 async def health_check():
     """Returns the health status and current timestamp of the API."""
