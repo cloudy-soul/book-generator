@@ -51,4 +51,4 @@ async def recommend(user_input: UserInput):
     return recommendations
 @app.get("/rime")
 def read_rime():
-    return {"message": "Rime."}
+    return {"message": "Rime hiiiiiii."}
