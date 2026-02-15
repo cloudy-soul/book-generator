@@ -49,3 +49,6 @@ async def recommend(user_input: UserInput):
     """Generates book, perfume, and drink recommendations based on user input."""
     recommendations = engine.generate_recommendations(user_input.model_dump())
     return recommendations
+@app.get("/rime")
+def read_rime():
+    return {"message": "Rime endpoint is under construction."}
