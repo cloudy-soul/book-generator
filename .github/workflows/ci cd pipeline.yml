@@ -236,17 +236,17 @@ jobs:
           for file in *.yaml *.yml 2>/dev/null; do
             if [ -f "$file" ]; then
               echo "Validating $file..."
-              python -c "
-import yaml
-import sys
-try:
-    with open('$file', 'r') as f:
-        data = yaml.safe_load(f)
-    print('  ✅ Valid')
-except Exception as e:
-    print(f'  ❌ Error: {e}')
-    sys.exit(1)
-"
+            python -c "
+            import yaml
+            import sys
+            try:
+                with open('$file', 'r') as f:
+                    data = yaml.safe_load(f)
+                print('  ✅ Valid')
+            except Exception as e:
+                print(f'  ❌ Error: {e}')
+                sys.exit(1)
+            "
             fi
           done
 
