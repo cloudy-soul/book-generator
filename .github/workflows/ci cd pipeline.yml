@@ -193,16 +193,16 @@ jobs:
             echo "⚠️ No test directory found"
             mkdir -p test
             cat > test/widget_test.dart << 'EOF'
-import 'package:flutter_test/flutter_test.dart';
-
-void main() {
-  test('placeholder test', () {
-    expect(true, isTrue);
-  });
-}
-EOF
-            flutter test
-          fi
+            import 'package:flutter_test/flutter_test.dart';
+            
+            void main() {
+              test('placeholder test', () {
+                expect(true, isTrue);
+              });
+            }
+            EOF
+                        flutter test
+                      fi
 
   # --------------------------------------------------
   # CONFIG VALIDATION
