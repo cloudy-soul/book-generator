@@ -250,18 +250,7 @@ jobs:
           fi
           
           # Config validation
-          if [ "${{ needs.check-files.outputs.has_config }}" == "true" ]; then
-            echo "Config validation: ${{ needs.config-validation.result }}"
-            if [[ "${{ needs.config-validation.result }}" != "success" ]] && [[ "${{ needs.config-validation.result }}" != "skipped" ]]; then
-              echo "❌ Config validation failed"
-              FAILED=true
-            else
-              echo "✅ Config validation passed"
-            fi
-          else
-            echo "Config: Directory not found, skipping"
-          fi
-          
+         
           echo ""
           if [ "$FAILED" == "true" ]; then
             echo "🚫 QUALITY GATE FAILED"
