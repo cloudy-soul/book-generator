@@ -1,0 +1,120 @@
+perfumes:
+  - name: "Santal 33"
+    brand: "Le Labo"
+    scent: "sandalwood, leather, smoke"
+
+  - name: "Black Phantom"
+    brand: "By Kilian"
+    scent: "coffee, chocolate, rum"
+
+  - name: "Molecule 01"
+    brand: "Escentric Molecules"
+    scent: "clean, iso e super, minimalist"
+
+  - name: "Portrait of a Lady"
+    brand: "Frédéric Malle"
+    scent: "rose, patchouli, incense"
+
+  - name: "Eau des Sens"
+    brand: "Diptyque"
+    scent: "orange blossom, herbal, green"
+
+  - name: "Baccarat Rouge 540"
+    brand: "Maison Francis Kurkdjian"
+    scent: "saffron, jasmine, ambergris"
+
+  - name: "L'Air du Désert Marocain"
+    brand: "Tauer Perfumes"
+    scent: "spices, amber, desert sand"
+
+  - name: "Silver Mountain Water"
+    brand: "Creed"
+    scent: "clean, metallic, mountain air"
+
+  - name: "Oud Wood"
+    brand: "Tom Ford"
+    scent: "oud, rosewood, sandalwood"
+
+  - name: "Fille en Aiguilles"
+    brand: "Serge Lutens"
+    scent: "pine, frankincense, dried fruits"
+
+  - name: "Encre Noire"
+    brand: "Lalique"
+    scent: "vetiver, cypress, ink"
+
+  - name: "Ambre Sultan"
+    brand: "Serge Lutens"
+    scent: "amber, resins, herbs"
+
+  - name: "Philosykos"
+    brand: "Diptyque"
+    scent: "fig, coconut, woody"
+
+  - name: "Terre d'Hermès"
+    brand: "Hermès"
+    scent: "vetiver, orange, flint"
+
+  - name: "Mitsouko"
+    brand: "Guerlain"
+    scent: "peach, oakmoss, spices"
+
+  - name: "Jubilation XXV"
+    brand: "Amouage"
+    scent: "incense, berries, oud"
+
+  - name: "Neroli Portofino"
+    brand: "Tom Ford"
+    scent: "neroli, citrus, floral"
+
+  - name: "Musc Ravageur"
+    brand: "Frédéric Malle"
+    scent: "musk, vanilla, spices"
+
+  - name: "Lys 41"
+    brand: "Le Labo"
+    scent: "lily, jasmine, vanilla"
+
+  - name: "Gypsy Water"
+    brand: "Byredo"
+    scent: "pine, vanilla, sandalwood"
+
+  - name: "Black Saffron"
+    brand: "Byredo"
+    scent: "saffron, violet, leather"
+
+  - name: "Fève Délicieuse"
+    brand: "Christian Dior"
+    scent: "tonka bean, vanilla, praline"
+
+  - name: "Bergamote 22"
+    brand: "Le Labo"
+    scent: "bergamot, vetiver, musk"
+
+  - name: "Black Orchid"
+    brand: "Tom Ford"
+    scent: "truffle, orchid, patchouli"
+
+  - name: "Reflection Man"
+    brand: "Amouage"
+    scent: "jasmine, neroli, woods"
+
+  - name: "Timbuktu"
+    brand: "L'Artisan Parfumeur"
+    scent: "mango, vetiver, incense"
+
+  - name: "Gris Charnel"
+    brand: "BDK Parfums"
+    scent: "fig, black tea, sandalwood"
+
+  - name: "Naxos"
+    brand: "Xerjoff"
+    scent: "honey, lavender, tobacco"
+
+  - name: "La Fille de Berlin"
+    brand: "Serge Lutens"
+    scent: "rose, violet, metallic"
+
+  - name: "Ombré Leather"
+    brand: "Tom Ford"
+    scent: "leather, jasmine, patchouli"

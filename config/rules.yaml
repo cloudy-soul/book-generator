@@ -1,0 +1,213 @@
+# Personality-based rules
+personality:
+  introvert:
+    preferred_genres: ["Fantasy", "Historical Fiction", "Literary Fiction", "Philosophical", "Classic"]
+    vibe: ["atmospheric", "lyrical", "thought-provoking", "calm", "magical", "philosophical"]
+    drink: ["herbal_tea", "matcha"]
+    perfume: ["fresh", "powdery"]
+    
+  extrovert:
+    preferred_genres: ["Romance", "Thriller", "Adventure", "Science Fiction", "Contemporary"]
+    vibe: ["energetic", "fast-paced", "glamorous", "suspenseful", "romantic", "adventurous"]
+    drink: ["iced_coffee", "latte"]
+    perfume: ["citrus", "bold"]
+
+# Zodiac (Astrological) influence
+zodiac:
+  aries:
+    genres: ["Adventure", "Thriller", "Military Fantasy", "Action"]
+    scents: ["spicy", "fiery", "gunpowder", "metal"]
+    
+  taurus:
+    genres: ["Historical Fiction", "Classic", "Family Drama", "Cozy Mystery"]
+    scents: ["earthy", "herbal", "comforting", "baked goods"]
+    
+  gemini:
+    genres: ["Mystery", "Science Fiction", "Books about Books", "Multiple Timeline"]
+    scents: ["complex", "paper", "coffee", "intellectual"]
+    
+  cancer:
+    genres: ["Family Saga", "Coming-of-Age", "Emotional", "Grief"]
+    scents: ["home cooking", "rain", "salt air", "nostalgic"]
+    
+  leo:
+    genres: ["Romantic Fantasy", "Hollywood", "Epic", "Drama"]
+    scents: ["perfume", "champagne", "royal", "glamorous"]
+    
+  virgo:
+    genres: ["Self-Help", "Non-Fiction", "Productivity", "Scientific"]
+    scents: ["clean", "organized", "paper", "clinical"]
+    
+  libra:
+    genres: ["Romance", "Contemporary", "Social Commentary"]
+    scents: ["floral", "perfume", "balanced", "elegant"]
+    
+  scorpio:
+    genres: ["Psychological Thriller", "Dark", "Mystery", "Romantic Suspense"]
+    scents: ["mysterious", "night-blooming", "intense", "secrets"]
+    
+  sagittarius:
+    genres: ["Travel", "Adventure", "Philosophical", "Space Opera"]
+    scents: ["adventure", "different lands", "campfire", "spices"]
+    
+  capricorn:
+    genres: ["Historical Fiction", "Political Fiction", "Legal Thriller", "Biography"]
+    scents: ["stone", "leather", "professional", "ambitious"]
+    
+  aquarius:
+    genres: ["Science Fiction", "Dystopian", "Speculative Fiction", "Cyberpunk"]
+    scents: ["futuristic", "ozone", "innovative", "rebellious"]
+    
+  pisces:
+    genres: ["Magical Realism", "Fantasy", "Poetic", "Spiritual"]
+    scents: ["sea salt", "magical", "dreamy", "ethereal"]
+
+# Coffee order-based personality booster
+coffee:
+  # Traditional orders
+  latte:
+    vibe: "cozy"
+    perfumes: ["vanilla", "warm", "comforting", "soft"]
+    
+  cappuccino:
+    vibe: "classic"
+    perfumes: ["balanced", "traditional", "creamy", "familiar"]
+    
+  espresso:
+    vibe: "intense"
+    perfumes: ["bold", "spicy", "woody", "concentrated"]
+    
+  americano:
+    vibe: "minimalist"
+    perfumes: ["clean", "simple", "uncomplicated", "direct"]
+    
+  mocha:
+    vibe: "sweet"
+    perfumes: ["chocolate", "indulgent", "decadent", "comforting"]
+    
+  flat_white:
+    vibe: "sophisticated"
+    perfumes: ["smooth", "refined", "velvety", "elegant"]
+    
+  macchiato:
+    vibe: "artistic"
+    perfumes: ["layered", "creative", "contrasting", "bold"]
+    
+  # Modern/Gen Z orders
+  iced_virgin_mojito_latte:
+    vibe: "refreshing"
+    perfumes: ["mint", "fresh", "cool", "summery"]
+    
+  pumpkin_spice_latte:
+    vibe: "seasonal"
+    perfumes: ["spiced", "warm", "festive", "cozy"]
+    
+  dirty_chai:
+    vibe: "adventurous"
+    perfumes: ["spicy", "exotic", "complex", "energizing"]
+    
+  caramel_macchiato_extra_caramel:
+    vibe: "indulgent"
+    perfumes: ["sweet", "caramel", "decadent", "luxurious"]
+    
+  matcha_latte_with_oat_milk:
+    vibe: "health-conscious"
+    perfumes: ["green", "clean", "earthy", "balanced"]
+    
+  nitro_cold_brew:
+    vibe: "energetic"
+    perfumes: ["bold", "smooth", "modern", "powerful"]
+    
+  lavender_honey_latte:
+    vibe: "calm"
+    perfumes: ["floral", "sweet", "relaxing", "gentle"]
+    
+  taro_bubble_tea:
+    vibe: "playful"
+    perfumes: ["sweet", "unique", "fun", "colorful"]
+    
+  salted_caramel_mocha_frappuccino:
+    vibe: "extra"
+    perfumes: ["salty-sweet", "complex", "dramatic", "indulgent"]
+    
+  turmeric_golden_milk_latte:
+    vibe: "wellness"
+    perfumes: ["spicy", "warm", "healing", "golden"]
+    
+  shaken_espresso_with_brown_sugar:
+    vibe: "dynamic"
+    perfumes: ["caramelized", "energetic", "textured", "modern"]
+    
+  coconut_milk_mocha:
+    vibe: "tropical"
+    perfumes: ["coconut", "chocolate", "exotic", "vacation"]
+    
+  red_velvet_latte:
+    vibe: "festive"
+    perfumes: ["chocolate", "creamy", "celebratory", "rich"]
+    
+  pistachio_latte:
+    vibe: "unique"
+    perfumes: ["nutty", "creamy", "distinctive", "sophisticated"]
+    
+  brown_sugar_oatmilk_shaken_espresso:
+    vibe: "trendy"
+    perfumes: ["caramel", "creamy", "modern", "balanced"]
+    
+  # Specialty/Alternative
+  cascara_latte:
+    vibe: "artisanal"
+    perfumes: ["fruity", "unique", "specialty", "discovery"]
+    
+  mushroom_coffee:
+    vibe: "alternative"
+    perfumes: ["earthy", "health-focused", "different", "functional"]
+    
+  affogato:
+    vibe: "dessert-like"
+    perfumes: ["vanilla", "coffee", "sweet", "indulgent"]
+    
+  spanish_latte:
+    vibe: "international"
+    perfumes: ["sweetened", "creamy", "traditional", "European"]
+    
+  vienna_coffee:
+    vibe: "classic_elegant"
+    perfumes: ["whipped cream", "traditional", "elegant", "Austrian"]
+    
+  # Tea-based alternatives (since you included matcha)
+  matcha:
+    vibe: "fresh"
+    perfumes: ["green", "clean", "calm", "focused"]
+    
+  chai_latte:
+    vibe: "spiced"
+    perfumes: ["warm spices", "comforting", "exotic", "invigorating"]
+    
+  london_fog:
+    vibe: "literary"
+    perfumes: ["bergamot", "earl grey", "cozy", "British"]
+    
+  hibiscus_tea:
+    vibe: "vibrant"
+    perfumes: ["tart", "floral", "colorful", "refreshing"]
+
+# Scoring Configuration
+scoring:
+  genre_exact: 5
+  genre_sub: 3
+  tag_match: 1
+  scent_family: 4
+  scent_note: 2
+  vibe_match: 3
+  vibe_tag: 1
+  personality_genre_boost: 3
+  zodiac_genre_boost: 2
+  coffee_vibe_boost: 1
+  coffee_scent_boost: 1
+
+penalties:
+  age_restricted: -1000
+  mild_restriction: -20
+  excluded_genre: -10
+  missing_data: -5

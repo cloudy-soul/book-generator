@@ -1,0 +1,1090 @@
+books:
+  - title: "Roses and Thieves"
+    author: "Rime Tazout"
+    main_genre: "Romance"
+    subgenres: ["Contemporary Romance", "New Adult"]
+    tone: "passionate, dramatic, emotional"
+    themes: ["love", "betrayal", "redemption", "secrets"]
+    imagery_palette: "vibrant sunsets, urban landscapes, floral motifs"
+    target_age_group: "adult"
+    scent: ["rose", "night-blooming jasmine", "rain on pavement"]
+    taste: ["sweet", "spicy", "bitter"]
+
+  - title: "To Kill a Mockingbird"
+    author: "Harper Lee"
+    main_genre: "Fiction"
+    subgenres: ["Classic", "Southern Gothic", "Coming-of-Age"]
+    tone: "serious, contemplative, moral"
+    themes: ["justice", "racism", "morality", "childhood innocence"]
+    imagery_palette: "dusty Southern town, oak trees, courthouse"
+    target_age_group: "YA to adult"
+    scent: ["old paper", "honeysuckle", "summer dust"]
+    taste: ["sweet", "sour", "complex"]
+
+  - title: "1984"
+    author: "George Orwell"
+    main_genre: "Fiction"
+    subgenres: ["Dystopian", "Political Fiction", "Classic"]
+    tone: "dark, oppressive, warning"
+    themes: ["totalitarianism", "surveillance", "truth", "freedom"]
+    imagery_palette: "gray urban landscapes, propaganda posters, bleak interiors"
+    target_age_group: "adult"
+    scent: ["cold metal", "stale air", "ink"]
+    taste: ["bitter", "metallic", "spicy"]
+
+  - title: "Pride and Prejudice"
+    author: "Jane Austen"
+    main_genre: "Fiction"
+    subgenres: ["Classic Romance", "Regency", "Satire"]
+    tone: "witty, romantic, social commentary"
+    themes: ["love", "class", "reputation", "family"]
+    imagery_palette: "English countryside, grand estates, ballrooms"
+    target_age_group: "YA to adult"
+    scent: ["lavender", "old books", "rain"]
+    taste: ["sweet", "complex", "refined"]
+
+  - title: "The Hobbit"
+    author: "J.R.R. Tolkien"
+    main_genre: "Fantasy"
+    subgenres: ["High Fantasy", "Adventure", "Children's Literature"]
+    tone: "adventurous, whimsical, epic"
+    themes: ["courage", "friendship", "home", "adventure"]
+    imagery_palette: "rolling hills, dark forests, mountain caves"
+    target_age_group: "middle-grade to adult"
+    scent: ["pipe tobacco", "forest pine", "old leather"]
+    taste: ["sweet", "earthy", "hearty"]
+
+  - title: "The Da Vinci Code"
+    author: "Dan Brown"
+    main_genre: "Thriller"
+    subgenres: ["Mystery", "Conspiracy", "Adventure"]
+    tone: "suspenseful, intellectual, fast-paced"
+    themes: ["religion", "history", "secrets", "symbolism"]
+    imagery_palette: "European churches, dark museums, ancient artifacts"
+    target_age_group: "adult"
+    scent: ["old stone", "candle wax", "parchment"]
+    taste: ["complex", "spicy", "intense"]
+
+  - title: "The Hunger Games"
+    author: "Suzanne Collins"
+    main_genre: "Young Adult"
+    subgenres: ["Dystopian", "Science Fiction", "Adventure"]
+    tone: "tense, dramatic, survivalist"
+    themes: ["survival", "oppression", "sacrifice", "rebellion"]
+    imagery_palette: "dark forests, futuristic arenas, dystopian cityscapes"
+    target_age_group: "YA"
+    scent: ["pine", "smoke", "damp earth"]
+    taste: ["bitter", "spicy", "savory"]
+
+  - title: "The Great Gatsby"
+    author: "F. Scott Fitzgerald"
+    main_genre: "Fiction"
+    subgenres: ["Classic", "Tragedy", "American Literature"]
+    tone: "nostalgic, tragic, glamorous"
+    themes: ["American Dream", "love", "wealth", "illusion"]
+    imagery_palette: "art deco parties, Long Island mansions, green light"
+    target_age_group: "adult"
+    scent: ["champagne", "cigarette smoke", "summer nights"]
+    taste: ["sweet", "bubbly", "sour"]
+
+  - title: "Harry Potter and the Sorcerer's Stone"
+    author: "J.K. Rowling"
+    main_genre: "Fantasy"
+    subgenres: ["Young Adult", "Magic", "Adventure"]
+    tone: "magical, adventurous, coming-of-age"
+    themes: ["friendship", "good vs evil", "identity", "courage"]
+    imagery_palette: "medieval castle, magical creatures, wizarding world"
+    target_age_group: "middle-grade to YA"
+    scent: ["wood polish", "pumpkin spice", "old books"]
+    taste: ["sweet", "buttery", "magical"]
+
+  - title: "The Alchemist"
+    author: "Paulo Coelho"
+    main_genre: "Fiction"
+    subgenres: ["Philosophical", "Spiritual", "Adventure"]
+    tone: "inspirational, spiritual, allegorical"
+    themes: ["destiny", "personal legend", "dreams", "journey"]
+    imagery_palette: "desert landscapes, pyramids, starry nights"
+    target_age_group: "adult"
+    scent: ["desert sand", "spices", "campfire"]
+    taste: ["spicy", "earthy", "sweet"]
+
+  - title: "The Silent Patient"
+    author: "Alex Michaelides"
+    main_genre: "Thriller"
+    subgenres: ["Psychological Thriller", "Mystery"]
+    tone: "dark, suspenseful, psychological"
+    themes: ["trauma", "silence", "therapy", "secrets"]
+    imagery_palette: "mental institution, art studio, dark interiors"
+    target_age_group: "adult"
+    scent: ["paint", "antiseptic", "rain"]
+    taste: ["bitter", "complex", "sour"]
+
+  - title: "It Ends With Us"
+    author: "Colleen Hoover"
+    main_genre: "Romance"
+    subgenres: ["Contemporary Romance", "New Adult", "Drama"]
+    tone: "emotional, intense, heart-wrenching"
+    themes: ["love", "abuse", "strength", "choices"]
+    imagery_palette: "urban settings, floral shops, emotional moments"
+    target_age_group: "adult"
+    scent: ["flowers", "rain", "fresh linen"]
+    taste: ["sweet", "salty", "bitter"]
+
+  - title: "Becoming"
+    author: "Michelle Obama"
+    main_genre: "Non-Fiction"
+    subgenres: ["Memoir", "Autobiography", "Inspirational"]
+    tone: "inspirational, reflective, honest"
+    themes: ["identity", "service", "family", "growth"]
+    imagery_palette: "White House, Chicago streets, family gatherings"
+    target_age_group: "adult"
+    scent: ["rose garden", "home cooking", "fresh air"]
+    taste: ["sweet", "savory", "comforting"]
+
+  - title: "Dune"
+    author: "Frank Herbert"
+    main_genre: "Science Fiction"
+    subgenres: ["Space Opera", "Political Fiction", "Ecological"]
+    tone: "epic, philosophical, political"
+    themes: ["power", "religion", "ecology", "destiny"]
+    imagery_palette: "desert planet, futuristic technology, sand dunes"
+    target_age_group: "adult"
+    scent: ["spice", "sand", "metal"]
+    taste: ["spicy", "earthy", "complex"]
+
+  - title: "The Girl on the Train"
+    author: "Paula Hawkins"
+    main_genre: "Thriller"
+    subgenres: ["Psychological Thriller", "Mystery"]
+    tone: "suspenseful, unreliable narrator, dark"
+    themes: ["memory", "obsession", "alcoholism", "secrets"]
+    imagery_palette: "train windows, suburban houses, rainy days"
+    target_age_group: "adult"
+    scent: ["rain", "alcohol", "perfume"]
+    taste: ["bitter", "complex", "sour"]
+
+  - title: "Educated"
+    author: "Tara Westover"
+    main_genre: "Non-Fiction"
+    subgenres: ["Memoir", "Biography", "Education"]
+    tone: "raw, inspirational, challenging"
+    themes: ["education", "family", "identity", "freedom"]
+    imagery_palette: "mountain landscape, university campuses, family farm"
+    target_age_group: "adult"
+    scent: ["mountain air", "old books", "metal"]
+    taste: ["earthy", "complex", "sweet"]
+
+  - title: "The Nightingale"
+    author: "Kristin Hannah"
+    main_genre: "Historical Fiction"
+    subgenres: ["War Fiction", "Family Saga", "Drama"]
+    tone: "emotional, historical, heartbreaking"
+    themes: ["war", "sisterhood", "resistance", "sacrifice"]
+    imagery_palette: "wartime France, countryside, occupied cities"
+    target_age_group: "adult"
+    scent: ["rain", "earth", "old wood"]
+    taste: ["bitter", "savory", "sweet"]
+
+  - title: "Where the Crawdads Sing"
+    author: "Delia Owens"
+    main_genre: "Fiction"
+    subgenres: ["Mystery", "Coming-of-Age", "Literary Fiction"]
+    tone: "atmospheric, mysterious, lyrical"
+    themes: ["isolation", "nature", "love", "mystery"]
+    imagery_palette: "marshlands, coastal North Carolina, wildlife"
+    target_age_group: "adult"
+    scent: ["salt marsh", "pine", "rain"]
+    taste: ["salty", "earthy", "sweet"]
+
+  - title: "Project Hail Mary"
+    author: "Andy Weir"
+    main_genre: "Science Fiction"
+    subgenres: ["Hard Science Fiction", "Space Adventure"]
+    tone: "scientific, adventurous, humorous"
+    themes: ["friendship", "survival", "science", "cooperation"]
+    imagery_palette: "spaceship interior, alien worlds, scientific equipment"
+    target_age_group: "adult"
+    scent: ["ozone", "metal", "clean air"]
+    taste: ["savory", "sweet", "complex"]
+
+
+  - title: "Atomic Habits"
+    author: "James Clear"
+    main_genre: "Non-Fiction"
+    subgenres: ["Self-Help", "Psychology", "Productivity"]
+    tone: "practical, motivational, evidence-based"
+    themes: ["habits", "improvement", "consistency", "growth"]
+    imagery_palette: "clean spaces, progress charts, simple systems"
+    target_age_group: "adult"
+    scent: ["clean linen", "fresh paper", "coffee"]
+    taste: ["clean", "refreshing", "energizing"]
+
+  - title: "The Midnight Library"
+    author: "Matt Haig"
+    main_genre: "Fiction"
+    subgenres: ["Philosophical", "Fantasy", "Contemporary"]
+    tone: "thought-provoking, hopeful, magical"
+    themes: ["regret", "choices", "life", "second chances"]
+    imagery_palette: "magical library, different lives, midnight sky"
+    target_age_group: "adult"
+    scent: ["old books", "rain", "night air"]
+    taste: ["sweet", "complex", "bitter"]
+
+  - title: "Circe"
+    author: "Madeline Miller"
+    main_genre: "Fantasy"
+    subgenres: ["Mythology", "Historical Fantasy", "Literary Fiction"]
+    tone: "lyrical, feminist, mythological"
+    themes: ["power", "isolation", "transformation", "agency"]
+    imagery_palette: "Greek islands, magical herbs, ocean waves"
+    target_age_group: "adult"
+    scent: ["sea salt", "herbs", "olive trees"]
+    taste: ["salty", "herbal", "complex"]
+
+  - title: "Klara and the Sun"
+    author: "Kazuo Ishiguro"
+    main_genre: "Science Fiction"
+    subgenres: ["Literary Fiction", "Dystopian", "Philosophical"]
+    tone: "melancholic, observant, futuristic"
+    themes: ["love", "consciousness", "technology", "isolation"]
+    imagery_palette: "futuristic stores, artificial light, suburban landscapes"
+    target_age_group: "adult"
+    scent: ["clean plastic", "sunlight", "dust"]
+    taste: ["metallic", "clean", "sweet"]
+
+  - title: "The Invisible Life of Addie LaRue"
+    author: "V.E. Schwab"
+    main_genre: "Fantasy"
+    subgenres: ["Historical Fantasy", "Romance", "Literary Fiction"]
+    tone: "melancholic, romantic, timeless"
+    themes: ["memory", "identity", "art", "time"]
+    imagery_palette: "Paris streets, art studios, different time periods"
+    target_age_group: "adult"
+    scent: ["old books", "rain", "paint"]
+    taste: ["sweet", "bitter", "complex"]
+
+  - title: "The Four Winds"
+    author: "Kristin Hannah"
+    main_genre: "Historical Fiction"
+    subgenres: ["Family Saga", "Depression Era", "Drama"]
+    tone: "epic, heartbreaking, resilient"
+    themes: ["family", "survival", "dust bowl", "migration"]
+    imagery_palette: "dust storms, Texas plains, migrant camps"
+    target_age_group: "adult"
+    scent: ["dust", "dry earth", "rain"]
+    taste: ["dry", "bitter", "savory"]
+
+  - title: "Malibu Rising"
+    author: "Taylor Jenkins Reid"
+    main_genre: "Historical Fiction"
+    subgenres: ["Family Drama", "Beach Read", "Contemporary"]
+    tone: "glamorous, family-focused, nostalgic"
+    themes: ["family", "fame", "secrets", "forgiveness"]
+    imagery_palette: "Malibu beach, 1980s parties, ocean views"
+    target_age_group: "adult"
+    scent: ["salt air", "sunscreen", "bonfire"]
+    taste: ["salty", "sweet", "smoky"]
+
+  - title: "Cloud Cuckoo Land"
+    author: "Anthony Doerr"
+    main_genre: "Historical Fiction"
+    subgenres: ["Literary Fiction", "Multiple Timeline", "Adventure"]
+    tone: "epic, interconnected, hopeful"
+    themes: ["storytelling", "connection", "time", "hope"]
+    imagery_palette: "ancient Constantinople, modern library, futuristic spaceship"
+    target_age_group: "adult"
+    scent: ["old paper", "incense", "clean air"]
+    taste: ["complex", "sweet", "earthy"]
+
+  - title: "The Lincoln Highway"
+    author: "Amor Towles"
+    main_genre: "Historical Fiction"
+    subgenres: ["Adventure", "Coming-of-Age", "Road Novel"]
+    tone: "adventurous, nostalgic, character-driven"
+    themes: ["journey", "brotherhood", "America", "destiny"]
+    imagery_palette: "1950s America, open road, diners, trains"
+    target_age_group: "adult"
+    scent: ["leather", "gasoline", "diner food"]
+    taste: ["savory", "sweet", "earthy"]
+
+  - title: "Matrix"
+    author: "Lauren Groff"
+    main_genre: "Historical Fiction"
+    subgenres: ["Literary Fiction", "Medieval", "Feminist"]
+    tone: "atmospheric, feminist, mystical"
+    themes: ["power", "faith", "community", "leadership"]
+    imagery_palette: "medieval nunnery, English countryside, religious spaces"
+    target_age_group: "adult"
+    scent: ["incense", "stone", "herbs"]
+    taste: ["earthy", "herbal", "complex"]
+
+  - title: "The Thursday Murder Club"
+    author: "Richard Osman"
+    main_genre: "Mystery"
+    subgenres: ["Cozy Mystery", "Humorous", "Contemporary"]
+    tone: "witty, clever, heartwarming"
+    themes: ["aging", "friendship", "mystery", "community"]
+    imagery_palette: "English retirement village, tea rooms, gardens"
+    target_age_group: "adult"
+    scent: ["tea", "baked goods", "rain"]
+    taste: ["sweet", "savory", "comforting"]
+
+  - title: "Billy Summers"
+    author: "Stephen King"
+    main_genre: "Thriller"
+    subgenres: ["Crime", "Noir", "Contemporary"]
+    tone: "tense, character-driven, suspenseful"
+    themes: ["redemption", "writing", "violence", "healing"]
+    imagery_palette: "small town America, motel rooms, writing desk"
+    target_age_group: "adult"
+    scent: ["coffee", "gun oil", "rain"]
+    taste: ["bitter", "spicy", "complex"]
+
+  - title: "Apples Never Fall"
+    author: "Liane Moriarty"
+    main_genre: "Fiction"
+    subgenres: ["Family Drama", "Mystery", "Contemporary"]
+    tone: "suspenseful, family-focused, psychological"
+    themes: ["family", "secrets", "marriage", "tennis"]
+    imagery_palette: "Australian suburbs, tennis courts, family home"
+    target_age_group: "adult"
+    scent: ["tennis balls", "grass", "family dinner"]
+    taste: ["sweet", "sour", "complex"]
+
+  - title: "The Judge's List"
+    author: "John Grisham"
+    main_genre: "Thriller"
+    subgenres: ["Legal Thriller", "Crime", "Mystery"]
+    tone: "suspenseful, legal, investigative"
+    themes: ["justice", "revenge", "law", "secrets"]
+    imagery_palette: "courtrooms, Florida settings, investigation files"
+    target_age_group: "adult"
+    scent: ["leather", "paper", "coffee"]
+    taste: ["complex", "spicy", "bitter"]
+
+  - title: "The Last Thing He Told Me"
+    author: "Laura Dave"
+    main_genre: "Thriller"
+    subgenres: ["Domestic Thriller", "Mystery", "Family Drama"]
+    tone: "suspenseful, emotional, mysterious"
+    themes: ["family", "trust", "secrets", "protection"]
+    imagery_palette: "houseboat, Texas town, family dynamics"
+    target_age_group: "adult"
+    scent: ["water", "wood", "mystery"]
+    taste: ["salty", "complex", "sweet"]
+
+  - title: "The Paris Apartment"
+    author: "Lucy Foley"
+    main_genre: "Thriller"
+    subgenres: ["Mystery", "Psychological Thriller", "Suspense"]
+    tone: "dark, mysterious, atmospheric"
+    themes: ["secrets", "family", "Paris", "isolation"]
+    imagery_palette: "Parisian apartment building, dark corridors, elegant spaces"
+    target_age_group: "adult"
+    scent: ["perfume", "old wood", "rainy Paris"]
+    taste: ["complex", "sweet", "bitter"]
+
+  - title: "One Italian Summer"
+    author: "Rebecca Serle"
+    main_genre: "Fiction"
+    subgenres: ["Magical Realism", "Romance", "Grief"]
+    tone: "emotional, magical, romantic"
+    themes: ["grief", "mother-daughter", "Italy", "self-discovery"]
+    imagery_palette: "Italian coast, lemon groves, Positano views"
+    target_age_group: "adult"
+    scent: ["lemons", "sea salt", "olive oil"]
+    taste: ["sweet", "sour", "savory"]
+
+  - title: "Reminders of Him"
+    author: "Colleen Hoover"
+    main_genre: "Romance"
+    subgenres: ["Contemporary Romance", "Drama", "Redemption"]
+    tone: "emotional, heartbreaking, hopeful"
+    themes: ["redemption", "motherhood", "forgiveness", "second chances"]
+    imagery_palette: "small town, emotional moments, simple settings"
+    target_age_group: "adult"
+    scent: ["rain", "fresh bread", "hope"]
+    taste: ["sweet", "salty", "bitter"]
+
+  - title: "Book Lovers"
+    author: "Emily Henry"
+    main_genre: "Romance"
+    subgenres: ["Contemporary Romance", "Romantic Comedy", "Books about Books"]
+    tone: "witty, romantic, bookish"
+    themes: ["career", "family", "books", "love"]
+    imagery_palette: "New York City, small town, bookstores"
+    target_age_group: "adult"
+    scent: ["old books", "coffee", "city rain"]
+    taste: ["sweet", "complex", "comforting"]
+
+  - title: "People We Meet on Vacation"
+    author: "Emily Henry"
+    main_genre: "Romance"
+    subgenres: ["Contemporary Romance", "Friends-to-Lovers", "Travel"]
+    tone: "funny, romantic, nostalgic"
+    themes: ["friendship", "travel", "love", "timing"]
+    imagery_palette: "various vacation destinations, beach scenes, hotel rooms"
+    target_age_group: "adult"
+    scent: ["sunscreen", "ocean", "hotel linen"]
+    taste: ["sweet", "salty", "refreshing"]
+
+  - title: "It Happened One Summer"
+    author: "Tessa Bailey"
+    main_genre: "Romance"
+    subgenres: ["Contemporary Romance", "Romantic Comedy", "Beach Read"]
+    tone: "sexy, funny, heartfelt"
+    themes: ["redemption", "fishing town", "opposites attract", "family"]
+    imagery_palette: "Washington coast, fishing boats, small town bars"
+    target_age_group: "adult"
+    scent: ["sea air", "rain", "beer"]
+    taste: ["spicy", "salty", "sweet"]
+
+  - title: "The Love Hypothesis"
+    author: "Ali Hazelwood"
+    main_genre: "Romance"
+    subgenres: ["Contemporary Romance", "Academic", "STEM Romance"]
+    tone: "funny, smart, romantic"
+    themes: ["science", "academia", "fake dating", "love"]
+    imagery_palette: "Stanford campus, labs, coffee shops"
+    target_age_group: "adult"
+    scent: ["coffee", "clean lab", "books"]
+    taste: ["sweet", "complex", "energizing"]
+
+  - title: "The Spanish Love Deception"
+    author: "Elena Armas"
+    main_genre: "Romance"
+    subgenres: ["Contemporary Romance", "Romantic Comedy", "Fake Dating"]
+    tone: "funny, romantic, heartfelt"
+    themes: ["fake dating", "Spain", "workplace romance", "family"]
+    imagery_palette: "New York offices, Spanish weddings, family gatherings"
+    target_age_group: "adult"
+    scent: ["coffee", "Spanish orange blossoms", "perfume"]
+    taste: ["sweet", "spicy", "complex"]
+
+  - title: "Hook, Line, and Sinker"
+    author: "Tessa Bailey"
+    main_genre: "Romance"
+    subgenres: ["Contemporary Romance", "Small Town", "Friends-to-Lovers"]
+    tone: "sexy, emotional, character-driven"
+    themes: ["friendship", "fishing town", "self-worth", "love"]
+    imagery_palette: "Pacific Northwest, fishing boats, small town"
+    target_age_group: "adult"
+    scent: ["sea air", "rain", "wood smoke"]
+    taste: ["salty", "sweet", "spicy"]
+
+  - title: "Ugly Love"
+    author: "Colleen Hoover"
+    main_genre: "Romance"
+    subgenres: ["New Adult", "Contemporary Romance", "Angsty Romance"]
+    tone: "emotional, angsty, intense"
+    themes: ["past trauma", "love", "healing", "relationships"]
+    imagery_palette: "apartment buildings, emotional scenes, simple settings"
+    target_age_group: "adult"
+    scent: ["rain", "sadness", "hope"]
+    taste: ["bitter", "sweet", "complex"]
+
+  - title: "November 9"
+    author: "Colleen Hoover"
+    main_genre: "Romance"
+    subgenres: ["New Adult", "Contemporary Romance", "Unique Structure"]
+    tone: "emotional, creative, romantic"
+    themes: ["timing", "writing", "love", "fate"]
+    imagery_palette: "different years, emotional meetings, writing scenes"
+    target_age_group: "adult"
+    scent: ["autumn leaves", "paper", "hope"]
+    taste: ["sweet", "complex", "bitter"]
+
+  - title: "Verity"
+    author: "Colleen Hoover"
+    main_genre: "Thriller"
+    subgenres: ["Psychological Thriller", "Romantic Suspense", "Dark"]
+    tone: "dark, suspenseful, psychological"
+    themes: ["writing", "secrets", "obsession", "truth"]
+    imagery_palette: "isolated house, writing desk, dark rooms"
+    target_age_group: "adult"
+    scent: ["old paper", "rain", "mystery"]
+    taste: ["bitter", "spicy", "complex"]
+
+  - title: "The Hating Game"
+    author: "Sally Thorne"
+    main_genre: "Romance"
+    subgenres: ["Contemporary Romance", "Romantic Comedy", "Workplace Romance"]
+    tone: "funny, romantic, enemies-to-lovers"
+    themes: ["workplace rivalry", "love", "competition", "chemistry"]
+    imagery_palette: "office setting, elevator scenes, paintball"
+    target_age_group: "adult"
+    scent: ["coffee", "paper", "perfume"]
+    taste: ["sweet", "spicy", "fun"]
+
+  - title: "The Unhoneymooners"
+    author: "Christina Lauren"
+    main_genre: "Romance"
+    subgenres: ["Contemporary Romance", "Romantic Comedy", "Enemies-to-Lovers"]
+    tone: "funny, romantic, vacation vibes"
+    themes: ["enemies to lovers", "Hawaii", "family", "work"]
+    imagery_palette: "Hawaiian resorts, beaches, tropical settings"
+    target_age_group: "adult"
+    scent: ["sunscreen", "ocean", "tropical flowers"]
+    taste: ["sweet", "refreshing", "spicy"]
+
+  - title: "The Soulmate Equation"
+    author: "Christina Lauren"
+    main_genre: "Romance"
+    subgenres: ["Contemporary Romance", "STEM Romance", "Romantic Comedy"]
+    tone: "smart, funny, romantic"
+    themes: ["science", "dating", "family", "love"]
+    imagery_palette: "San Diego, science labs, coffee shops"
+    target_age_group: "adult"
+    scent: ["coffee", "clean lab", "ocean air"]
+    taste: ["sweet", "complex", "refreshing"]
+
+  - title: "Beach Read"
+    author: "Emily Henry"
+    main_genre: "Romance"
+    subgenres: ["Contemporary Romance", "Books about Books", "Summer Read"]
+    tone: "witty, romantic, thoughtful"
+    themes: ["writing", "grief", "love", "authors"]
+    imagery_palette: "Michigan beach house, writing spaces, summer days"
+    target_age_group: "adult"
+    scent: ["lake air", "old books", "summer rain"]
+    taste: ["sweet", "complex", "comforting"]
+
+  - title: "The Kiss Quotient"
+    author: "Helen Hoang"
+    main_genre: "Romance"
+    subgenres: ["Contemporary Romance", "Neurodiverse Romance", "STEM Romance"]
+    tone: "sweet, smart, romantic"
+    themes: ["autism", "dating", "mathematics", "love"]
+    imagery_palette: "Silicon Valley, elegant dates, emotional moments"
+    target_age_group: "adult"
+    scent: ["clean spaces", "perfume", "books"]
+    taste: ["sweet", "complex", "mathematical"]
+
+  - title: "The Bride Test"
+    author: "Helen Hoang"
+    main_genre: "Romance"
+    subgenres: ["Contemporary Romance", "Cross-Cultural", "Arranged Marriage"]
+    tone: "heartfelt, cultural, romantic"
+    themes: ["immigration", "family", "autism", "love"]
+    imagery_palette: "Vietnam, California, hotel settings"
+    target_age_group: "adult"
+    scent: ["Vietnamese food", "hotel linen", "hope"]
+    taste: ["spicy", "sweet", "complex"]
+
+  - title: "The Heart Principle"
+    author: "Helen Hoang"
+    main_genre: "Romance"
+    subgenres: ["Contemporary Romance", "Mental Health", "Music"]
+    tone: "emotional, honest, romantic"
+    themes: ["burnout", "autism", "music", "family"]
+    imagery_palette: "concert stages, home settings, emotional spaces"
+    target_age_group: "adult"
+    scent: ["violin rosin", "books", "emotional honesty"]
+    taste: ["complex", "bitter", "sweet"]
+
+  - title: "From Blood and Ash"
+    author: "Jennifer L. Armentrout"
+    main_genre: "Fantasy"
+    subgenres: ["Romantic Fantasy", "New Adult", "Paranormal Romance"]
+    tone: "epic, romantic, fantasy"
+    themes: ["destiny", "love", "power", "secrets"]
+    imagery_palette: "fantasy kingdoms, battle scenes, romantic moments"
+    target_age_group: "adult"
+    scent: ["magic", "blood", "night flowers"]
+    taste: ["spicy", "metallic", "sweet"]
+
+  - title: "A Court of Thorns and Roses"
+    author: "Sarah J. Maas"
+    main_genre: "Fantasy"
+    subgenres: ["Romantic Fantasy", "New Adult", "Fairy Tale Retelling"]
+    tone: "epic, romantic, fantasy"
+    themes: ["beauty and the beast", "love", "war", "fae"]
+    imagery_palette: "fae courts, magical forests, battle scenes"
+    target_age_group: "adult"
+    scent: ["night flowers", "magic", "forest"]
+    taste: ["spicy", "sweet", "complex"]
+
+  - title: "A Court of Mist and Fury"
+    author: "Sarah J. Maas"
+    main_genre: "Fantasy"
+    subgenres: ["Romantic Fantasy", "New Adult", "Epic Fantasy"]
+    tone: "epic, romantic, transformative"
+    themes: ["trauma", "healing", "love", "war"]
+    imagery_palette: "Night Court, magical training, romantic scenes"
+    target_age_group: "adult"
+    scent: ["night-blooming flowers", "magic", "rain"]
+    taste: ["spicy", "complex", "sweet"]
+
+  - title: "Throne of Glass"
+    author: "Sarah J. Maas"
+    main_genre: "Fantasy"
+    subgenres: ["Young Adult", "Epic Fantasy", "Assassin"]
+    tone: "epic, adventurous, fantasy"
+    themes: ["assassin", "competition", "magic", "destiny"]
+    imagery_palette: "glass castle, competition arena, magical lands"
+    target_age_group: "YA to adult"
+    scent: ["stone", "steel", "magic"]
+    taste: ["spicy", "metallic", "sweet"]
+
+  - title: "Crescent City: House of Earth and Blood"
+    author: "Sarah J. Maas"
+    main_genre: "Fantasy"
+    subgenres: ["Urban Fantasy", "New Adult", "Mystery"]
+    tone: "urban, fantasy, mystery"
+    themes: ["grief", "friendship", "urban fantasy", "mystery"]
+    imagery_palette: "modern city with magic, skyscrapers, magical creatures"
+    target_age_group: "adult"
+    scent: ["city rain", "magic", "night air"]
+    taste: ["complex", "spicy", "urban"]
+
+  - title: "Fourth Wing"
+    author: "Rebecca Yarros"
+    main_genre: "Fantasy"
+    subgenres: ["Romantic Fantasy", "New Adult", "Dragon Fantasy"]
+    tone: "adventurous, romantic, fantasy"
+    themes: ["dragons", "war college", "disability", "romance"]
+    imagery_palette: "dragon riding school, battle scenes, fantasy world"
+    target_age_group: "adult"
+    scent: ["dragon fire", "leather", "rain"]
+    taste: ["spicy", "sweet", "fiery"]
+
+  - title: "Iron Flame"
+    author: "Rebecca Yarros"
+    main_genre: "Fantasy"
+    subgenres: ["Romantic Fantasy", "New Adult", "Dragon Fantasy"]
+    tone: "epic, romantic, continuing saga"
+    themes: ["war", "dragons", "love", "betrayal"]
+    imagery_palette: "expanded fantasy world, battles, dragon flight"
+    target_age_group: "adult"
+    scent: ["smoke", "magic", "dragon scales"]
+    taste: ["fiery", "complex", "spicy"]
+
+  - title: "The Atlas Six"
+    author: "Olivie Blake"
+    main_genre: "Fantasy"
+    subgenres: ["Dark Academia", "Magical Competition", "Philosophical"]
+    tone: "dark, academic, magical"
+    themes: ["magic", "competition", "knowledge", "power"]
+    imagery_palette: "ancient library, magical competition, academic settings"
+    target_age_group: "adult"
+    scent: ["old books", "magic", "rain"]
+    taste: ["complex", "bitter", "sweet"]
+
+  - title: "Babel"
+    author: "R.F. Kuang"
+    main_genre: "Fantasy"
+    subgenres: ["Dark Academia", "Historical Fantasy", "Linguistics"]
+    tone: "dark, academic, linguistic"
+    themes: ["colonialism", "language", "translation", "revolution"]
+    imagery_palette: "Oxford University, translation magic, 19th century England"
+    target_age_group: "adult"
+    scent: ["old books", "ink", "rainy England"]
+    taste: ["complex", "bitter", "intellectual"]
+
+  - title: "The Poppy War"
+    author: "R.F. Kuang"
+    main_genre: "Fantasy"
+    subgenres: ["Military Fantasy", "Historical Fantasy", "Grimdark"]
+    tone: "dark, military, epic"
+    themes: ["war", "shamanism", "violence", "power"]
+    imagery_palette: "military academy, war scenes, shamanic magic"
+    target_age_group: "adult"
+    scent: ["gunpowder", "blood", "incense"]
+    taste: ["bitter", "spicy", "metallic"]
+
+  - title: "The Dragon Republic"
+    author: "R.F. Kuang"
+    main_genre: "Fantasy"
+    subgenres: ["Military Fantasy", "Historical Fantasy", "Sequel"]
+    tone: "dark, military, political"
+    themes: ["civil war", "leadership", "trauma", "power"]
+    imagery_palette: "battlefields, political meetings, dragon appearances"
+    target_age_group: "adult"
+    scent: ["smoke", "rain", "metal"]
+    taste: ["bitter", "spicy", "complex"]
+
+  - title: "The Burning God"
+    author: "R.F. Kuang"
+    main_genre: "Fantasy"
+    subgenres: ["Military Fantasy", "Historical Fantasy", "Finale"]
+    tone: "dark, epic, conclusive"
+    themes: ["revolution", "power", "sacrifice", "war"]
+    imagery_palette: "final battles, divine power, war-torn land"
+    target_age_group: "adult"
+    scent: ["fire", "blood", "divine power"]
+    taste: ["fiery", "bitter", "final"]
+
+  - title: "Jade City"
+    author: "Fonda Lee"
+    main_genre: "Fantasy"
+    subgenres: ["Urban Fantasy", "Gangster Fantasy", "Asian-inspired"]
+    tone: "gangster, family, magical"
+    themes: ["family", "power", "magic jade", "crime"]
+    imagery_palette: "Asian-inspired city, gangster fights, jade magic"
+    target_age_group: "adult"
+    scent: ["jade", "city rain", "gunpowder"]
+    taste: ["spicy", "complex", "metallic"]
+
+  - title: "Jade War"
+    author: "Fonda Lee"
+    main_genre: "Fantasy"
+    subgenres: ["Urban Fantasy", "Gangster Fantasy", "Sequel"]
+    tone: "epic, gangster, international"
+    themes: ["war", "family", "international conflict", "jade"]
+    imagery_palette: "expanded world, international settings, gang warfare"
+    target_age_group: "adult"
+    scent: ["jade", "different countries", "conflict"]
+    taste: ["complex", "spicy", "international"]
+
+  - title: "Jade Legacy"
+    author: "Fonda Lee"
+    main_genre: "Fantasy"
+    subgenres: ["Urban Fantasy", "Gangster Fantasy", "Finale"]
+    tone: "epic, generational, concluding"
+    themes: ["legacy", "family", "time", "power"]
+    imagery_palette: "generational story, aging characters, final conflicts"
+    target_age_group: "adult"
+    scent: ["aging jade", "time", "family legacy"]
+    taste: ["complex", "bitter", "sweet"]
+
+  - title: "The Name of the Wind"
+    author: "Patrick Rothfuss"
+    main_genre: "Fantasy"
+    subgenres: ["Epic Fantasy", "Coming-of-Age", "Magic School"]
+    tone: "lyrical, epic, magical"
+    themes: ["storytelling", "magic", "music", "destiny"]
+    imagery_palette: "magic university, inn settings, epic storytelling"
+    target_age_group: "adult"
+    scent: ["inn fireplace", "old books", "magic"]
+    taste: ["complex", "sweet", "musical"]
+
+  - title: "The Wise Man's Fear"
+    author: "Patrick Rothfuss"
+    main_genre: "Fantasy"
+    subgenres: ["Epic Fantasy", "Adventure", "Sequel"]
+    tone: "epic, adventurous, continuing"
+    themes: ["adventure", "magic", "love", "story"]
+    imagery_palette: "expanded world, different cultures, magical encounters"
+    target_age_group: "adult"
+    scent: ["different lands", "magic", "adventure"]
+    taste: ["complex", "spicy", "sweet"]
+
+  - title: "The Way of Kings"
+    author: "Brandon Sanderson"
+    main_genre: "Fantasy"
+    subgenres: ["Epic Fantasy", "High Fantasy", "World Building"]
+    tone: "epic, world-building, magical"
+    themes: ["leadership", "war", "magic", "destiny"]
+    imagery_palette: "stormy landscapes, magical armor, epic battles"
+    target_age_group: "adult"
+    scent: ["storm air", "stone", "magic"]
+    taste: ["complex", "spicy", "epic"]
+
+  - title: "Words of Radiance"
+    author: "Brandon Sanderson"
+    main_genre: "Fantasy"
+    subgenres: ["Epic Fantasy", "High Fantasy", "Sequel"]
+    tone: "epic, expanding, magical"
+    themes: ["oaths", "power", "leadership", "secrets"]
+    imagery_palette: "expanded world, magical discoveries, epic scenes"
+    target_age_group: "adult"
+    scent: ["storm", "magic", "ancient stone"]
+    taste: ["complex", "epic", "sweet"]
+
+  - title: "Oathbringer"
+    author: "Brandon Sanderson"
+    main_genre: "Fantasy"
+    subgenres: ["Epic Fantasy", "High Fantasy", "Third Book"]
+    tone: "epic, psychological, world-saving"
+    themes: ["redemption", "leadership", "unity", "war"]
+    imagery_palette: "cosmic landscapes, psychological journeys, epic battles"
+    target_age_group: "adult"
+    scent: ["cosmic air", "stone", "magic"]
+    taste: ["complex", "psychological", "epic"]
+
+  - title: "Rhythm of War"
+    author: "Brandon Sanderson"
+    main_genre: "Fantasy"
+    subgenres: ["Epic Fantasy", "High Fantasy", "Fourth Book"]
+    tone: "scientific, epic, magical"
+    themes: ["science", "magic", "war", "discovery"]
+    imagery_palette: "scientific research, magical experiments, war"
+    target_age_group: "adult"
+    scent: ["laboratory", "magic", "storm"]
+    taste: ["scientific", "complex", "epic"]
+
+  - title: "Mistborn: The Final Empire"
+    author: "Brandon Sanderson"
+    main_genre: "Fantasy"
+    subgenres: ["Epic Fantasy", "Heist", "Magic System"]
+    tone: "heist, revolutionary, magical"
+    themes: ["revolution", "magic system", "heist", "oppression"]
+    imagery_palette: "ash-covered world, magical fights, heist planning"
+    target_age_group: "adult"
+    scent: ["ash", "metal", "magic"]
+    taste: ["metallic", "spicy", "revolutionary"]
+
+  - title: "The Well of Ascension"
+    author: "Brandon Sanderson"
+    main_genre: "Fantasy"
+    subgenres: ["Epic Fantasy", "Political", "Sequel"]
+    tone: "political, revolutionary, magical"
+    themes: ["leadership", "politics", "power", "magic"]
+    imagery_palette: "political chambers, siege warfare, magical discoveries"
+    target_age_group: "adult"
+    scent: ["politics", "metal", "magic"]
+    taste: ["complex", "political", "metallic"]
+
+  - title: "The Hero of Ages"
+    author: "Brandon Sanderson"
+    main_genre: "Fantasy"
+    subgenres: ["Epic Fantasy", "Apocalyptic", "Finale"]
+    tone: "apocalyptic, epic, concluding"
+    themes: ["apocalypse", "sacrifice", "religion", "destiny"]
+    imagery_palette: "dying world, final battles, divine intervention"
+    target_age_group: "adult"
+    scent: ["apocalypse", "ash", "divine"]
+    taste: ["final", "bitter", "sweet"]
+
+  - title: "The Night Circus"
+    author: "Erin Morgenstern"
+    main_genre: "Fantasy"
+    subgenres: ["Magical Realism", "Romantic Fantasy", "Circus"]
+    tone: "magical, romantic, atmospheric"
+    themes: ["magic", "competition", "love", "circus"]
+    imagery_palette: "black and white circus, magical tents, nighttime"
+    target_age_group: "adult"
+    scent: ["popcorn", "night air", "magic"]
+    taste: ["sweet", "magical", "complex"]
+
+  - title: "The Starless Sea"
+    author: "Erin Morgenstern"
+    main_genre: "Fantasy"
+    subgenres: ["Magical Realism", "Books about Books", "Mythological"]
+    tone: "lyrical, mysterious, bookish"
+    themes: ["stories", "mythology", "time", "love"]
+    imagery_palette: "underground library, starless sea, magical doors"
+    target_age_group: "adult"
+    scent: ["old books", "honey", "sea air"]
+    taste: ["sweet", "complex", "mythological"]
+
+  - title: "Piranesi"
+    author: "Susanna Clarke"
+    main_genre: "Fantasy"
+    subgenres: ["Literary Fantasy", "Mystery", "Architectural"]
+    tone: "mysterious, atmospheric, philosophical"
+    themes: ["isolation", "memory", "house", "identity"]
+    imagery_palette: "endless halls, statues, tidal halls"
+    target_age_group: "adult"
+    scent: ["stone", "sea water", "old marble"]
+    taste: ["salty", "clean", "complex"]
+
+  - title: "Jonathan Strange & Mr Norrell"
+    author: "Susanna Clarke"
+    main_genre: "Fantasy"
+    subgenres: ["Historical Fantasy", "Regency Fantasy", "Literary"]
+    tone: "witty, historical, magical"
+    themes: ["magic", "rivalry", "England", "fairy"]
+    imagery_palette: "Regency England, magical studies, fairy realms"
+    target_age_group: "adult"
+    scent: ["old books", "English rain", "magic"]
+    taste: ["complex", "witty", "historical"]
+
+  - title: "The Once and Future King"
+    author: "T.H. White"
+    main_genre: "Fantasy"
+    subgenres: ["Arthurian", "Classic", "Coming-of-Age"]
+    tone: "philosophical, Arthurian, coming-of-age"
+    themes: ["leadership", "justice", "education", "Arthurian legend"]
+    imagery_palette: "medieval England, castles, magical training"
+    target_age_group: "YA to adult"
+    scent: ["castle stone", "forest", "old parchment"]
+    taste: ["historical", "complex", "sweet"]
+
+  - title: "The Left Hand of Darkness"
+    author: "Ursula K. Le Guin"
+    main_genre: "Science Fiction"
+    subgenres: ["Literary Sci-Fi", "Anthropological", "Gender Exploration"]
+    tone: "philosophical, anthropological, cold"
+    themes: ["gender", "culture", "alien contact", "friendship"]
+    imagery_palette: "ice planet, alien landscapes, cultural encounters"
+    target_age_group: "adult"
+    scent: ["ice", "alien atmosphere", "cultural exchange"]
+    taste: ["cold", "complex", "philosophical"]
+
+  - title: "The Dispossessed"
+    author: "Ursula K. Le Guin"
+    main_genre: "Science Fiction"
+    subgenres: ["Political Sci-Fi", "Anarchist", "Utopian/Dystopian"]
+    tone: "political, philosophical, dual narrative"
+    themes: ["anarchism", "capitalism", "science", "society"]
+    imagery_palette: "two contrasting planets, scientific labs, political meetings"
+    target_age_group: "adult"
+    scent: ["different atmospheres", "political tension", "scientific discovery"]
+    taste: ["complex", "political", "scientific"]
+
+  - title: "Neuromancer"
+    author: "William Gibson"
+    main_genre: "Science Fiction"
+    subgenres: ["Cyberpunk", "Noir", "Tech Thriller"]
+    tone: "cyberpunk, noir, technological"
+    themes: ["cyberspace", "AI", "crime", "future"]
+    imagery_palette: "future Tokyo, cyberspace, neon lights"
+    target_age_group: "adult"
+    scent: ["neon", "tech", "rainy streets"]
+    taste: ["metallic", "complex", "cyber"]
+
+  - title: "Snow Crash"
+    author: "Neal Stephenson"
+    main_genre: "Science Fiction"
+    subgenres: ["Cyberpunk", "Satire", "Tech Thriller"]
+    tone: "satirical, cyberpunk, fast-paced"
+    themes: ["virtual reality", "linguistics", "pizza delivery", "future"]
+    imagery_palette: "virtual metaverse, future America, cyber settings"
+    target_age_group: "adult"
+    scent: ["pizza", "virtual reality", "future tech"]
+    taste: ["spicy", "complex", "virtual"]
+
+  - title: "Ready Player One"
+    author: "Ernest Cline"
+    main_genre: "Science Fiction"
+    subgenres: ["Virtual Reality", "Gaming", "Adventure"]
+    tone: "nostalgic, gaming, adventure"
+    themes: ["virtual reality", "80s nostalgia", "gaming", "treasure hunt"]
+    imagery_palette: "virtual OASIS, 80s references, future dystopia"
+    target_age_group: "YA to adult"
+    scent: ["virtual reality", "80s nostalgia", "pop culture"]
+    taste: ["sweet", "nostalgic", "gaming"]
+
+  - title: "The Martian"
+    author: "Andy Weir"
+    main_genre: "Science Fiction"
+    subgenres: ["Hard Science Fiction", "Survival", "Mars"]
+    tone: "scientific, humorous, survival"
+    themes: ["survival", "Mars", "science", "ingenuity"]
+    imagery_palette: "Mars landscape, scientific equipment, survival scenes"
+    target_age_group: "adult"
+    scent: ["Mars dust", "potatoes", "scientific equipment"]
+    taste: ["earthy", "scientific", "savory"]
+
+  - title: "Children of Time"
+    author: "Adrian Tchaikovsky"
+    main_genre: "Science Fiction"
+    subgenres: ["Space Opera", "Evolutionary", "First Contact"]
+    tone: "epic, evolutionary, space opera"
+    themes: ["evolution", "spiders", "humanity", "time"]
+    imagery_palette: "evolving planet, spider civilizations, space travel"
+    target_age_group: "adult"
+    scent: ["alien world", "evolution", "space"]
+    taste: ["complex", "evolutionary", "epic"]
+
+  - title: "Hyperion"
+    author: "Dan Simmons"
+    main_genre: "Science Fiction"
+    subgenres: ["Space Opera", "Canterbury Tales", "Mystery"]
+    tone: "epic, mysterious, literary"
+    themes: ["pilgrimage", "time", "religion", "alien"]
+    imagery_palette: "different worlds, mysterious Shrike, space travel"
+    target_age_group: "adult"
+    scent: ["different planets", "mystery", "space"]
+    taste: ["complex", "mysterious", "epic"]
+
+  - title: "Foundation"
+    author: "Isaac Asimov"
+    main_genre: "Science Fiction"
+    subgenres: ["Space Opera", "Political Sci-Fi", "Classic"]
+    tone: "epic, political, scientific"
+    themes: ["psychohistory", "empire", "science", "future"]
+    imagery_palette: "galactic empire, future cities, scientific predictions"
+    target_age_group: "adult"
+    scent: ["future cities", "scientific prediction", "space"]
+    taste: ["complex", "scientific", "epic"]
+
+  - title: "I, Robot"
+    author: "Isaac Asimov"
+    main_genre: "Science Fiction"
+    subgenres: ["Robot Fiction", "Short Stories", "Classic"]
+    tone: "scientific, philosophical, robot"
+    themes: ["robots", "ethics", "AI", "three laws"]
+    imagery_palette: "future robotics, ethical dilemmas, scientific settings"
+    target_age_group: "adult"
+    scent: ["metal", "scientific ethics", "future"]
+    taste: ["metallic", "ethical", "complex"]
+
+  - title: "Do Androids Dream of Electric Sheep?"
+    author: "Philip K. Dick"
+    main_genre: "Science Fiction"
+    subgenres: ["Dystopian", "Noir", "Philosophical"]
+    tone: "philosophical, dystopian, noir"
+    themes: ["androids", "empathy", "reality", "animals"]
+    imagery_palette: "dystopian city, artificial animals, noir settings"
+    target_age_group: "adult"
+    scent: ["dust", "artificial life", "dystopian rain"]
+    taste: ["complex", "philosophical", "metallic"]
+
+  - title: "The Handmaid's Tale"
+    author: "Margaret Atwood"
+    main_genre: "Dystopian"
+    subgenres: ["Feminist", "Political Fiction", "Speculative Fiction"]
+    tone: "dystopian, feminist, warning"
+    themes: ["gender oppression", "theocracy", "resistance", "memory"]
+    imagery_palette: "Gilead, red robes, oppressive settings"
+    target_age_group: "adult"
+    scent: ["fear", "oppression", "memory"]
+    taste: ["bitter", "complex", "warning"]
+
+  - title: "Oryx and Crake"
+    author: "Margaret Atwood"
+    main_genre: "Dystopian"
+    subgenres: ["Speculative Fiction", "Post-Apocalyptic", "Science Fiction"]
+    tone: "post-apocalyptic, scientific, tragic"
+    themes: ["genetic engineering", "apocalypse", "memory", "science"]
+    imagery_palette: "post-apocalyptic world, genetic experiments, memories"
+    target_age_group: "adult"
+    scent: ["decay", "genetic experiments", "memory"]
+    taste: ["bitter", "scientific", "complex"]
+
+  - title: "The Testaments"
+    author: "Margaret Atwood"
+    main_genre: "Dystopian"
+    subgenres: ["Sequel", "Political Fiction", "Feminist"]
+    tone: "political, revealing, continuation"
+    themes: ["resistance", "secrets", "Gilead", "freedom"]
+    imagery_palette: "expanded Gilead, resistance, political intrigue"
+    target_age_group: "adult"
+    scent: ["secrets", "resistance", "hope"]
+    taste: ["complex", "political", "hopeful"]
+
+  - title: "Brave New World"
+    author: "Aldous Huxley"
+    main_genre: "Dystopian"
+    subgenres: ["Classic", "Science Fiction", "Social Commentary"]
+    tone: "satirical, warning, futuristic"
+    themes: ["utopia/dystopia", "consumerism", "happiness", "freedom"]
+    imagery_palette: "futuristic London, genetic engineering, pleasure palaces"
+    target_age_group: "adult"
+    scent: ["synthetic happiness", "chemicals", "future"]
+    taste: ["synthetic", "complex", "warning"]
+
+  - title: "Fahrenheit 451"
+    author: "Ray Bradbury"
+    main_genre: "Dystopian"
+    subgenres: ["Classic", "Science Fiction", "Censorship"]
+    tone: "warning, burning, literary"
+    themes: ["censorship", "books", "memory", "fire"]
+    imagery_palette: "burning books, fire department, oppressive society"
+    target_age_group: "adult"
+    scent: ["burning paper", "fear", "memory"]
+    taste: ["smoky", "bitter", "warning"]
+
+  - title: "The Road"
+    author: "Cormac McCarthy"
+    main_genre: "Post-Apocalyptic"
+    subgenres: ["Literary Fiction", "Father-Son", "Dystopian"]
+    tone: "bleak, hopeful, minimalist"
+    themes: ["survival", "father-son", "hope", "apocalypse"]
+    imagery_palette: "gray landscape, road journey, post-apocalyptic world"
+    target_age_group: "adult"
+    scent: ["ash", "rain", "hope"]
+    taste: ["bitter", "savory", "hopeful"]

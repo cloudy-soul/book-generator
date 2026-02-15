@@ -1,0 +1,90 @@
+drinks:
+  - drink: "Espresso"
+    taste: ["bitter", "intense", "concentrated"]
+
+  - drink: "Matcha Latte"
+    taste: ["earthy", "sweet", "creamy"]
+
+  - drink: "Herbal Tea (Chamomile)"
+    taste: ["floral", "calming", "gentle"]
+
+  - drink: "Iced Coffee"
+    taste: ["refreshing", "bitter", "crisp"]
+
+  - drink: "Sparkling Water"
+    taste: ["clean", "refreshing", "crisp"]
+
+  - drink: "Chai Latte"
+    taste: ["spicy", "sweet", "creamy"]
+
+  - drink: "Lemonade"
+    taste: ["sour", "sweet", "refreshing"]
+
+  - drink: "Hot Chocolate"
+    taste: ["sweet", "comforting", "rich"]
+
+  - drink: "Green Tea"
+    taste: ["earthy", "bitter", "clean"]
+
+  - drink: "Coca-Cola"
+    taste: ["sweet", "spicy", "carbonated"]
+
+  - drink: "Mojito (non-alcoholic)"
+    taste: ["refreshing", "minty", "sweet-sour"]
+
+  - drink: "Pumpkin Spice Latte"
+    taste: ["spicy", "sweet", "creamy"]
+
+  - drink: "Bubble Tea (Brown Sugar)"
+    taste: ["sweet", "chewy", "caramel"]
+
+  - drink: "Arnold Palmer"
+    taste: ["sweet", "tart", "refreshing"]
+
+  - drink: "Ginger Beer"
+    taste: ["spicy", "sweet", "fiery"]
+
+  - drink: "Coconut Water"
+    taste: ["sweet", "nutty", "refreshing"]
+
+  - drink: "Turmeric Golden Milk"
+    taste: ["spicy", "warm", "healing"]
+
+  - drink: "London Fog (Earl Grey Latte)"
+    taste: ["bergamot", "creamy", "sweet"]
+
+  - drink: "Horchata"
+    taste: ["sweet", "cinnamon", "creamy"]
+
+  - drink: "Lavender Honey Latte"
+    taste: ["floral", "sweet", "calming"]
+
+  - drink: "Thai Iced Tea"
+    taste: ["sweet", "spicy", "creamy"]
+
+  - drink: "Apple Cider"
+    taste: ["sweet", "spiced", "warming"]
+
+  - drink: "Iced Matcha Lemonade"
+    taste: ["earthy", "sour", "refreshing"]
+
+  - drink: "Dalgona Coffee"
+    taste: ["sweet", "creamy", "bitter"]
+
+  - drink: "Hibiscus Tea"
+    taste: ["tart", "floral", "refreshing"]
+
+  - drink: "Salted Caramel Mocha"
+    taste: ["salty-sweet", "rich", "complex"]
+
+  - drink: "Taro Milk Tea"
+    taste: ["sweet", "nutty", "creamy"]
+
+  - drink: "Black Coffee"
+    taste: ["bitter", "bold", "simple"]
+
+  - drink: "Mango Lassi"
+    taste: ["sweet", "creamy", "fruity"]
+
+  - drink: "Sparkling Lemon Ginger"
+    taste: ["spicy", "sour", "refreshing"]
