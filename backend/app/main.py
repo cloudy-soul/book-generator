@@ -30,6 +30,7 @@ engine = RecommendationEngine(
     rules_path='config/rules.yaml',
     perfumes_path='config/perfumes.yaml',
     drinks_path='config/drinks.yaml'
+    #clothes_path='config/clothes.yaml'
 )
 
 
