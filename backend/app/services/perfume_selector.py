@@ -1,59 +1,74 @@
-from typing import List, Dict
-import difflib
+from app.core.mappings import GENRE_MAP
+import random
 
-def _perfume_tokens(perfume: Dict) -> List[str]:
-    perf_scent = perfume.get('scent') or ''
-    return [t.lower().strip() for t in perf_scent.split(',') if t.strip()]
+# Expansion map to bridge Genre Scents (keys) to Perfume Notes (values from perfumes.yaml)
+SCENT_EXPANSION = {
+    "spicy": ["spice", "spices", "cardamom", "saffron", "pepper", "clove", "cinnamon"],
+    "woody": ["wood", "sandalwood", "cedar", "oud", "pine", "cypress", "vetiver", "patchouli", "oakmoss"],
+    "floral": ["rose", "jasmine", "lily", "violet", "neroli", "orange blossom", "lavender", "tuberose", "floral"],
+    "fresh": ["clean", "citrus", "bergamot", "green", "herbal", "mint", "water", "air"],
+    "smokey": ["smoke", "incense", "tobacco", "birch", "ash", "burnt"],
+    "fruity": ["fruit", "berry", "berries", "mango", "peach", "fig", "coconut"],
+    "earthy": ["earth", "vetiver", "patchouli", "oakmoss", "resins", "truffle", "mineral"],
+    "sweet": ["vanilla", "honey", "praline", "chocolate", "caramel", "tonka", "sugar", "marshmallow"],
+    "boozy": ["rum", "cognac", "whiskey", "bourbon", "alcohol"],
+    "tea-like": ["tea", "matcha", "black tea"],
+    "metallic": ["metal", "ink", "steel"],
+    "leather": ["leather", "suede"],
+    "creamy": ["milk", "lactonic", "sandalwood", "vanilla", "coconut", "cream"],
+    "aromatic": ["lavender", "sage", "rosemary", "herbal", "aromatic"],
+    "citrus": ["bergamot", "orange", "lemon", "lime", "grapefruit", "neroli"],
+    "oceanic": ["sea", "salt", "water", "marine"],
+    "clean": ["clean", "soap", "linen", "musk", "aldehyde"],
+    "warm": ["amber", "musk", "cinnamon", "vanilla"],
+    "nutty": ["almond", "hazelnut", "chestnut", "praline"],
+    "powdery": ["iris", "violet", "musk", "powder"],
+    "resinous": ["amber", "resins", "frankincense", "myrrh", "benzoin"],
+    "honeyed": ["honey", "beeswax"]
+}
 
-def _tokens_similar(a: str, b: str) -> bool:
-    a = a.lower().strip()
-    b = b.lower().strip()
-    if a in b or b in a:
-        return True
-    if a[:4] and a[:4] in b:
-        return True
-    if b[:4] and b[:4] in a:
-        return True
-    matches = difflib.get_close_matches(a, [b], n=1, cutoff=0.7)
-    return bool(matches)
+def select_perfume(perfumes_list, selected_book, user_input):
+    """
+    Selects a perfume that aligns with the selected book's genre scents
+    and the user's scent preference.
+    """
+    if not perfumes_list:
+        return {}
 
-def select_perfume(perfumes: List[Dict], top_book: Dict, user_input: Dict, rules: Dict) -> Dict:
-    """Select a perfume based on user scent, coffee hints, then top book scents."""
-    selected = perfumes[0] if perfumes else {}
-    user_scent = user_input.get('scent')
-    user_coffee = user_input.get('coffee')
-    coffee_rules = rules.get('coffee', {}).get(user_coffee, {}) if user_coffee else {}
+    # 1. Determine target scents (High Level)
+    target_scents_high_level = []
+    
+    # A. Scents associated with the Book's Genre
+    if selected_book:
+        genre = selected_book.get('main_genre', '').lower()
+        target_scents_high_level.extend(GENRE_MAP.get(genre, {}).get('scents', []))
 
-    matched = False
-    # 1) by user scent
-    if isinstance(user_scent, str):
-        us = user_scent.lower().strip()
-        for perfume in perfumes:
-            if any(_tokens_similar(us, pt) for pt in _perfume_tokens(perfume)):
-                selected = perfume
-                matched = True
-                break
+    # 2. Expand High Level Scents to Specific Notes
+    expanded_targets = set()
+    for scent in target_scents_high_level:
+        scent = scent.lower().strip()
+        expanded_targets.add(scent) # Add the term itself
+        # Add synonyms from map
+        if scent in SCENT_EXPANSION:
+            expanded_targets.update(SCENT_EXPANSION[scent])
 
-    # 2) coffee hints
-    if not matched and coffee_rules:
-        hints = coffee_rules.get('perfumes', [])
-        for hint in hints:
-            h = hint.lower()
-            for perfume in perfumes:
-                if any(_tokens_similar(h, pt) for pt in _perfume_tokens(perfume)):
-                    selected = perfume
-                    matched = True
-                    break
-            if matched:
-                break
-
-    # 3) book scent fallback
-    if not matched and top_book:
-        book_scents = [s.lower().strip() for s in (top_book.get('scent') or []) if isinstance(s, str)]
-        for perfume in perfumes:
-            if any(any(_tokens_similar(bs, pt) for pt in _perfume_tokens(perfume)) for bs in book_scents):
-                selected = perfume
-                matched = True
-                break
-
-    return selected
+    # 3. Score Perfumes
+    scored_perfumes = []
+    
+    for perfume in perfumes_list:
+        score = 0
+        # Use 'scent' field from YAML
+        perfume_notes_str = str(perfume.get('scent', '')).lower()
+        
+        for target in expanded_targets:
+            if target in perfume_notes_str:
+                score += 1
+        
+        scored_perfumes.append((score, perfume))
+    
+    # 4. Sort and Pick
+    scored_perfumes.sort(key=lambda x: x[0], reverse=True)
+    
+    if scored_perfumes:
+        return scored_perfumes[0][1]
+    return random.choice(perfumes_list)

@@ -1,0 +1,180 @@
+genre_map = {
+    romance : {scents : [floral, sweet, clean, fruity, creamy, spicy] , flavors: [sweet, spicy, floral, cinnamon, caramel, vanilla]}
+    fantasy : {scents : [woody, smoke leather, oceanic, earthy, citrus], flavors: [sour, earthy, chocolate, zesty]}
+    sci-fi : {scents : [aromatic, resinous, leather, oceanic, earthy, citrus], flavors : [BITTER, EARTHY, NUTTY, Smokey, tangy]}
+    fiction : {scents : [woody, fresh, warm, nutty, milky], flavors : [spicy, nutty, complex, cinnamon]}
+    thriller : {scents :[spicey, woody, Smokey, powdery, earthy], flavors : [roasted, bitter, crispy, smokey, complex, energizing]}
+    dystopian : {scents : [metallic, leather, mineral, earthy, nutty], flavors : [nutty, zesty, crispy]}
+    historical fiction : {scents : [woody, leather, smokey, tea-like], flavors : [buttery, roasted, cinnamon., complex] }
+    non-fiction : {scents : [citrus, herbal, balsamic] flavors: [sour, creamy, roasted]}
+    mystery: {scents: [spicy, smokey, citrus, nutty] flavors: [nutty, complex, roasted, energizing]}
+    post apocalyptic : {scents: [earthy, smokey, metallic, boozy], flavors : [roaster, bold, caramel]}
+    young adult : { scents: [tea-like, honeyed, milky, warm, spicy, creamy, floral, earthy], flavors: [caramel, zesty, vanilla]}
+    contemporary : {scents: [woody, floral, fruity, earthy], flavors: [herbal, calm, caramel]}
+    literary fiction : {scents : [floral, leather, aromatic, earthy], flavors : [nutty, bold, roasted]}
+    classics : {scents: [earthy, woody, smokey, leather, tea-like], flavors: [roasted, nutty, caramel, complex]}
+    drama : {scents: [fruity, creamy, aromatic, spicy ], flavors : [zesty, nutty, spicy]}
+}
+
+zodiac_genres = {
+    "aries": ["Thriller", "Fantasy", "Drama", "Science Fiction", "Post-Apocalyptic"],
+    "taurus": ["Romance", "Historical Fiction", "Classics", "Literary Fiction", "Fiction"],
+    "gemini": ["Mystery", "Science Fiction", "Contemporary", "Thriller", "Fiction"],
+    "cancer": ["Historical Fiction", "Romance", "Drama", "Young Adult", "Literary Fiction"],
+    "leo": ["Fantasy", "Romance", "Drama", "Historical Fiction", "Classics"],
+    "virgo": ["Mystery", "Non-Fiction", "Science Fiction", "Classics", "Literary Fiction"],
+    "libra": ["Romance", "Contemporary", "Drama", "Literary Fiction", "Classics"],
+    "scorpio": ["Thriller", "Mystery", "Dystopian", "Post-Apocalyptic", "Drama"],
+    "sagittarius": ["Fantasy", "Science Fiction", "Historical Fiction", "Adventure", "Fiction"],
+    "capricorn": ["Historical Fiction", "Classics", "Non-Fiction", "Drama", "Literary Fiction"],
+    "aquarius": ["Science Fiction", "Dystopian", "Contemporary", "Fantasy", "Non-Fiction"],
+    "pisces": ["Fantasy", "Romance", "Drama", "Literary Fiction", "Fiction"]
+}
+
+drink_map = [
+    # GEN-Z / TRENDY DRINKS (Fancy long names)
+    {
+        "drink": "Iced Brown Sugar Oatmilk Shaken Espresso",
+        "flavors": ["sweet", "caramel", "creamy", "bold", "roasted"]
+    },
+    {
+        "drink": "Lavender Honey Oatmilk Latte",
+        "flavors": ["floral", "sweet", "creamy", "calming", "smooth"]
+    },
+    {
+        "drink": "Matcha Latte with Vanilla Cold Foam",
+        "flavors": ["earthy", "creamy", "sweet", "vanilla", "smooth"]
+    },
+    {
+        "drink": "Dragonfruit Refresher with Coconut Milk",
+        "flavors": ["fruity", "sweet", "creamy", "refreshing", "tropical"]
+    },
+    {
+        "drink": "Salted Caramel Cream Cold Brew",
+        "flavors": ["sweet", "caramel", "creamy", "bold", "rich"]
+    },
+    {
+        "drink": "Pumpkin Cream Chai Latte",
+        "flavors": ["spicy", "sweet", "creamy", "cinnamon", "warming"]
+    },
+    {
+        "drink": "Brown Sugar Boba Milk Tea",
+        "flavors": ["sweet", "caramel", "creamy", "rich", "smooth"]
+    },
+    {
+        "drink": "Strawberry Matcha Latte",
+        "flavors": ["fruity", "sweet", "earthy", "creamy", "refreshing"]
+    },
+    {
+        "drink": "Turmeric Golden Milk Latte",
+        "flavors": ["spicy", "earthy", "creamy", "warming", "herbal"]
+    },
+    {
+        "drink": "Butterbeer Frappuccino (Secret Menu)",
+        "flavors": ["sweet", "buttery", "creamy", "caramel", "rich"]
+    },
+    {
+        "drink": "Midnight Mint Mocha",
+        "flavors": ["chocolate", "minty", "creamy", "sweet", "cooling"]
+    },
+    {
+        "drink": "Rose Cardamom Latte",
+        "flavors": ["floral", "spicy", "creamy", "sweet", "warming"]
+    },
+    {
+        "drink": "Coconut Cold Brew with Cinnamon",
+        "flavors": ["nutty", "spicy", "bold", "refreshing", "creamy"]
+    },
+    {
+        "drink": "Hazelnut White Chocolate Mocha",
+        "flavors": ["nutty", "chocolate", "sweet", "creamy", "rich"]
+    },
+    {
+        "drink": "Ube Violet Latte",
+        "flavors": ["nutty", "sweet", "creamy", "earthy", "vanilla"]
+    },
+    
+    # CLASSICS (Beloved standards)
+    {
+        "drink": "Caffè Latte",
+        "flavors": ["creamy", "smooth", "roasted", "mild", "comforting"]
+    },
+    {
+        "drink": "Cappuccino",
+        "flavors": ["bold", "creamy", "roasted", "smooth", "energizing"]
+    },
+    {
+        "drink": "Espresso",
+        "flavors": ["bold", "bitter", "intense", "roasted", "energizing"]
+    },
+    {
+        "drink": "Americano",
+        "flavors": ["bold", "bitter", "clean", "crisp", "roasted"]
+    },
+    {
+        "drink": "Mocha",
+        "flavors": ["chocolate", "sweet", "creamy", "rich", "smooth"]
+    },
+    {
+        "drink": "Caramel Macchiato",
+        "flavors": ["caramel", "sweet", "creamy", "vanilla", "smooth"]
+    },
+    {
+        "drink": "Chai Tea Latte",
+        "flavors": ["spicy", "sweet", "creamy", "cinnamon", "warming"]
+    },
+    {
+        "drink": "Matcha Green Tea",
+        "flavors": ["earthy", "smooth", "herbal", "clean", "calming"]
+    },
+    {
+        "drink": "Hot Chocolate",
+        "flavors": ["chocolate", "sweet", "creamy", "rich", "warming"]
+    },
+    {
+        "drink": "Earl Grey Tea",
+        "flavors": ["floral", "herbal", "clean", "crisp", "calming"]
+    },
+    
+    # OLD-FASHIONED / TRADITIONAL
+    {
+        "drink": "Turkish Coffee",
+        "flavors": ["bold", "bitter", "spicy", "rich", "earthy"]
+    },
+    {
+        "drink": "Mulled Wine",
+        "flavors": ["spicy", "sweet", "warming", "fruity", "cinnamon"]
+    },
+    {
+        "drink": "Buttered Rum (Non-Alcoholic)",
+        "flavors": ["buttery", "sweet", "spicy", "warming", "rich"]
+    },
+    {
+        "drink": "Mexican Hot Chocolate",
+        "flavors": ["chocolate", "spicy", "cinnamon", "sweet", "warming"]
+    },
+    {
+        "drink": "Masala Chai",
+        "flavors": ["spicy", "sweet", "herbal", "cinnamon", "warming"]
+    },
+    {
+        "drink": "Mint Julep (Non-Alcoholic)",
+        "flavors": ["minty", "sweet", "refreshing", "herbal", "cooling"]
+    },
+    {
+        "drink": "Horchata",
+        "flavors": ["sweet", "cinnamon", "creamy", "nutty", "refreshing"]
+    },
+    {
+        "drink": "Lassi (Sweet)",
+        "flavors": ["creamy", "sweet", "fruity", "smooth", "refreshing"]
+    },
+    {
+        "drink": "Sahlab (Salep)",
+        "flavors": ["creamy", "sweet", "warming", "vanilla", "nutty"]
+    },
+    {
+        "drink": "Kombucha",
+        "flavors": ["tangy", "refreshing", "fruity", "crisp", "complex"]
+    }
+]

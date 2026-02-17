@@ -39,21 +39,6 @@ def test_recommend_endpoint_valid():
     
     print("✓ Recommendation endpoint returns valid structure")
 
-def test_recommend_endpoint_invalid_age():
-    """Test /recommend with invalid age"""
-    test_payload = {
-        "scent": "floral",
-        "zodiac": "gemini",
-        "coffee": "latte",
-        "age": 10,  # Too young
-        "genres": ["fantasy"]
-    }
-    
-    response = client.post("/recommend", json=test_payload)
-    # Pydantic validation should return 422 for age < 12
-    assert response.status_code == 422
-    print("✓ Handles edge case age")
-
 def test_recommend_missing_fields():
     """Test /recommend with missing required fields"""
     test_payload = {

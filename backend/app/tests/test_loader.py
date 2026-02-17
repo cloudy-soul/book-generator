@@ -19,15 +19,6 @@ def test_load_books_yaml():
     assert 'scent' in first_book
     print(f"✓ Loaded {len(books)} books")
 
-def test_load_rules_yaml():
-    """Test that rules.yaml has required sections"""
-    rules = load_yaml_file('config/rules.yaml')
-    assert 'zodiac' in rules
-    assert 'coffee' in rules
-    assert 'scoring' in rules
-    assert 'penalties' in rules
-    print("✓ Rules YAML structure is valid")
-
 def test_load_perfumes_yaml():
     """Test perfumes.yaml structure"""
     data = load_yaml_file('config/perfumes.yaml')
@@ -43,7 +34,6 @@ def test_yaml_file_exists():
     """Ensure all YAML files exist"""
     required_files = [
         'config/books.yaml',
-        'config/rules.yaml', 
         'config/perfumes.yaml',
         'config/drinks.yaml'
     ]
