@@ -1,27 +1,45 @@
-from typing import List, Dict
+from app.core.mappings import DRINK_MAP, GENRE_MAP
+import random
 
-def select_drink(drinks: List[Dict], top_book: Dict, user_input: Dict, rules: Dict) -> Dict:
-    """Select a drink based on coffee rule vibes, then top_book taste overlap."""
-    selected = drinks[0] if drinks else {}
-    user_coffee = user_input.get('coffee')
-    coffee_rules = rules.get('coffee', {}).get(user_coffee, {}) if user_coffee else {}
+def select_drink(drinks_list, selected_book, user_input):
+    """
+    Selects a drink from DRINK_MAP that matches the flavor profile 
+    of the selected book's genre.
+    """
+    # 1. Determine target flavors
+    target_flavors = []
+    
+    # A. From Book Genre (Primary driver based on relationships.txt)
+    if selected_book:
+        genre = selected_book.get('main_genre', '').lower()
+        target_flavors.extend(GENRE_MAP.get(genre, {}).get('flavors', []))
+        
+    # B. From User Coffee Preference (if it maps to a flavor keyword)
+    user_coffee = user_input.get('coffee', '').lower()
+    target_flavors.append(user_coffee) 
 
-    # 1) coffee-vibe hint
-    if coffee_rules:
-        vibe = (coffee_rules.get('vibe') or '').lower()
-        if vibe:
-            for drink in drinks:
-                drink_tastes = [dt.lower().strip() for dt in (drink.get('taste') or []) if isinstance(dt, str)]
-                if any(vibe in dt or dt in vibe for dt in drink_tastes):
-                    return drink
-
-    # 2) top book tastes
-    if top_book:
-        book_tastes = [t.lower().strip() for t in (top_book.get('taste') or []) if isinstance(t, str)]
-        if book_tastes:
-            for drink in drinks:
-                drink_tastes = [dt.lower().strip() for dt in (drink.get('taste') or []) if isinstance(dt, str)]
-                if set(book_tastes) & set(drink_tastes):
-                    return drink
-
-    return selected
+    # 2. Score Drinks
+    scored_drinks = []
+    
+    # Use the provided drinks_list (from YAML) if available, otherwise fallback
+    candidates = drinks_list if drinks_list else DRINK_MAP
+    
+    for drink in candidates:
+        score = 0
+        # Check both 'taste' (from YAML) and 'flavors' (from mapping) keys for robustness
+        drink_flavors = [f.lower() for f in drink.get('taste', []) + drink.get('flavors', [])]
+        
+        # Calculate overlap
+        for target in target_flavors:
+            if any(target in df for df in drink_flavors):
+                score += 1
+        
+        scored_drinks.append((score, drink))
+    
+    # 3. Sort and Pick
+    scored_drinks.sort(key=lambda x: x[0], reverse=True)
+    
+    # Return the best match, or a random one if no matches found
+    if scored_drinks:
+        return scored_drinks[0][1]
+    return random.choice(candidates)

@@ -18,16 +18,13 @@ app.add_middleware(
 
 # Pydantic model for request body validation
 class UserInput(BaseModel):
-    scent: str
     zodiac: str
     coffee: str
-    age: int = Field(..., gt=12, description="User's age, must be older than 12")
     genres: List[str]
 
 # Initialize the recommendation engine once on startup
 engine = RecommendationEngine(
     books_path='config/books.yaml',
-    rules_path='config/rules.yaml',
     perfumes_path='config/perfumes.yaml',
     drinks_path='config/drinks.yaml'
     #clothes_path='config/clothes.yaml'
@@ -49,6 +46,3 @@ async def recommend(user_input: UserInput):
     """Generates book, perfume, and drink recommendations based on user input."""
     recommendations = engine.generate_recommendations(user_input.model_dump())
     return recommendations
-@app.get("/rime")
-def read_rime():
-    return {"message": "Rime hiiiiiii."}

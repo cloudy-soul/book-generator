@@ -9,7 +9,6 @@ def test_engine_initialization():
     """Test engine loads all components"""
     engine = RecommendationEngine(
         books_path='config/books.yaml',
-        rules_path='config/rules.yaml',
         perfumes_path='config/perfumes.yaml',
         drinks_path='config/drinks.yaml'
     )
@@ -22,7 +21,6 @@ def test_recommendation_flow():
     """Test full recommendation pipeline"""
     engine = RecommendationEngine(
         books_path='config/books.yaml',
-        rules_path='config/rules.yaml',
         perfumes_path='config/perfumes.yaml',
         drinks_path='config/drinks.yaml'
     )
@@ -61,7 +59,6 @@ def test_empty_genres():
     """Test with empty genre list"""
     engine = RecommendationEngine(
         books_path='config/books.yaml',
-        rules_path='config/rules.yaml',
         perfumes_path='config/perfumes.yaml',
         drinks_path='config/drinks.yaml'
     )

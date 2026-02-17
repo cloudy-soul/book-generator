@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/theme/app_colors.dart';
 import 'package:frontend/theme/app_typography.dart';
-import 'package:frontend/widgets/scent_wheel.dart';
 import 'package:frontend/widgets/coffee_cup_selector.dart';
 import 'package:frontend/widgets/genre_bookshelf.dart';
 import 'package:frontend/widgets/zodiac_selector.dart';
-import 'package:frontend/widgets/age_selector.dart';
 import 'package:frontend/services/api_service.dart';
 import 'package:http/http.dart' as http;
 
@@ -20,16 +18,10 @@ class InputFormPage extends StatefulWidget {
 class _InputFormPageState extends State<InputFormPage> {
   int _currentStep = 0;
   final PageController _pageController = PageController();
-  final Map<String, dynamic> _userSelections = {'age': 25}; // Default age
+  final Map<String, dynamic> _userSelections = {};
   bool _isSubmitting = false;
   
   final List<Map<String, dynamic>> _steps = [
-    {
-      'title': 'Scent Preference',
-      'subtitle': 'What fragrance feels most like you today?',
-      'color': AppColors.lavenderWeb,
-      'icon': Icons.spa_rounded,
-    },
     {
       'title': 'Zodiac Sign',
       'subtitle': 'Share your celestial energy',
@@ -41,12 +33,6 @@ class _InputFormPageState extends State<InputFormPage> {
       'subtitle': 'Your go-to comfort drink',
       'color': AppColors.oldLace,
       'icon': Icons.coffee_rounded,
-    },
-    {
-      'title': 'Age',
-      'subtitle': 'To tailor recommendations',
-      'color': AppColors.roseQuartz,
-      'icon': Icons.cake_rounded,
     },
     {
       'title': 'Preferred Genres',
@@ -199,26 +185,16 @@ class _InputFormPageState extends State<InputFormPage> {
   Widget _buildStepContent(int index) {
     switch (index) {
       case 0:
-        return ScentWheelSelector(
-          initialScent: _userSelections['scent'],
-          onScentSelected: (val) => _userSelections['scent'] = val,
-        );
-      case 1:
         return ZodiacConstellationSelector(
           initialZodiac: _userSelections['zodiac'],
           onZodiacSelected: (val) => _userSelections['zodiac'] = val,
         );
-      case 2:
+      case 1:
         return CoffeeCupSelector(
           initialCoffee: _userSelections['coffee'],
           onCoffeeSelected: (val) => _userSelections['coffee'] = val,
         );
-      case 3:
-        return AgeDialSelector(
-          initialAge: _userSelections['age'],
-          onAgeSelected: (val) => _userSelections['age'] = val,
-        );
-      case 4:
+      case 2:
         return GenreBookshelfSelector(
           initialGenres: _userSelections['genres'] != null ? List<String>.from(_userSelections['genres']) : null,
           onGenresSelected: (val) => _userSelections['genres'] = val,
