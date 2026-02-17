@@ -70,7 +70,7 @@ drink_map = [
         "flavors": ["spicy", "earthy", "creamy", "warming", "herbal"]
     },
     {
-        "drink": "Butterbeer Frappuccino (Secret Menu)",
+        "drink": "Butterbeer Frappuccino",
         "flavors": ["sweet", "buttery", "creamy", "caramel", "rich"]
     },
     {
